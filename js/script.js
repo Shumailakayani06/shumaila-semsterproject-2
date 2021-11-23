@@ -18,16 +18,20 @@ async function getProducts(){
         products.innerHTML = "";
 
         data.forEach((item) =>{
+            if(item.featured === true){
+            
             
             products.innerHTML += `
             
             <div>
-            <a href="/detail.html?id=${item.id}"">
+            <a href="/featured.html?id=${item.id}"">
             <h2>${item.title}</h2>
+            <h3>${item.featured}</h3>
             </a>
             </div>
             
             `
+            }
         })
             
        

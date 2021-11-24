@@ -6,16 +6,10 @@ const urlPro = url + "products";
 let data=[];
 
 
+
+
 //filter searchbox
-searchBar.addEventListener('keyup', (e) =>{
-    const searchString = e.target.value;
-    const filteredData = data.filter(item =>{
-        return (item.title.includes(searchString));
-    })
-    console.log(filteredData); 
-  
-    displayProducts(filteredData);
-})
+
 
 
 // fetch featured products
@@ -26,7 +20,7 @@ async function getProducts(){
         data = await response.json();
         console.log(data);
 
-        displayProducts(data);
+        displayProducts();
 
     }catch(error){
         console.log(error);
@@ -37,8 +31,7 @@ async function getProducts(){
 // display featured products
  function displayProducts() {
 
-
-    products.innerHTML = "";
+        products.innerHTML = "";
 
     data.forEach((item) =>{
         
@@ -52,8 +45,27 @@ async function getProducts(){
         
         `
     })
+
+}
+
+searchBar.onkeyup = function (){
+    //console.log(event);
+    
+
+    const searchValue = event.target.value.trim().toLowerCase();
+    const filteredProducts = data.filter(function(item){
+        if(item.title.toLowerCase().startsWith(searchValue)){
+            return true;
+        }
+    })
+    console.log(filteredProducts);
+    data = filteredProducts;
+    
+    displayProducts(filteredProducts);
     
 }
+
+
 
 getProducts();
 

@@ -31,7 +31,7 @@ async function getProducts(){
 // display featured products
  function displayProducts() {
 
-        products.innerHTML = "";
+    products.innerHTML = "";
 
     data.forEach((item) =>{
         
@@ -56,6 +56,11 @@ searchBar.onkeyup = function (){
     const filteredProducts = data.filter(function(item){
         if(item.title.toLowerCase().startsWith(searchValue)){
             return true;
+        }
+
+        if(searchValue.length <=1){
+            console.log("hello this is empty");
+            
         }
     })
     console.log(filteredProducts);

@@ -25,12 +25,12 @@ export function guName(){
 
 
 
-function stStorage(key, value){
+export function stStorage(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }
 
-function gfStorage(key){
-    const value = localstorage.getItem(key);
+ export function gfStorage(key){
+    const value = localStorage.getItem(key); 
 
     if(!value){
         return [];

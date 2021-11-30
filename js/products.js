@@ -1,4 +1,5 @@
 import { url } from "../components.js";
+import menu from "./menu.js";
 
 const products = document.querySelector(".featured-products");
 const searchBar = document.getElementById('searchBar');
@@ -13,6 +14,8 @@ let data=[];
 
 
 // fetch featured products
+
+menu();
 
 async function getProducts(){
     try{
@@ -40,6 +43,8 @@ async function getProducts(){
         <div>
         <a href="/detail.html?id=${item.id}"">
         <h2>${item.title}</h2>
+        <p>${item.price}</p>
+        IMAGE GOES HERE
         </a>
         </div>
         

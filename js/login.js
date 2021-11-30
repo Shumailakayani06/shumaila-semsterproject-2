@@ -3,6 +3,7 @@ import { invalid } from "../components.js";
 import { successfull } from "../components.js";
 import { url } from "../components.js";
 import { sToken, sUser } from "./lsStorage.js";
+import menu from "./menu.js";
 
 
 const form = document.querySelector("form");
@@ -10,6 +11,7 @@ const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-c");
 
+menu();
 
 form.addEventListener("submit" , submitForm);
 
@@ -52,7 +54,7 @@ async function login(username, password){
             sToken(json.jwt);
             sUser(json.user)
 
-            location.href ="/index.html";
+            location.href ="/products.html";
         }
 
         if(json.error){

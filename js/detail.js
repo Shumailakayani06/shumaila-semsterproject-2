@@ -35,6 +35,11 @@ async function getData(){
         <h2>
         ${details.title}
         </h2>
+        IMAGE GOES HERE
+        <p>${details.description}</p>
+        <p>${details.price}</p>
+        
+
         <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" >add to cart</button>
         </div>
         `

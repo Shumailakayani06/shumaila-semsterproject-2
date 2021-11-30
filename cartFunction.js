@@ -1,5 +1,10 @@
+
+const cartProducts = document.querySelector(".cart-products");
+
+
+
 export function getProducts(){
-    const cartItems = localStorage.getItem("cart")
+    let cartItems = localStorage.getItem("cart")
 
     if(!cartItems){
      
@@ -14,3 +19,4 @@ export function getProducts(){
 
 
 }
+

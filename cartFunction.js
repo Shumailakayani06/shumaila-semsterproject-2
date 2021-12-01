@@ -1,5 +1,5 @@
 
-const cartProducts = document.querySelector(".cart-products");
+
 
 
 

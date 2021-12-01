@@ -23,7 +23,7 @@ async function getProducts(){
             
             products.innerHTML += `
             
-            <div>
+            <div class="pDiv">
             <a href="/featured.html?id=${item.id}"">
             <h2>${item.title}</h2>
             IMGAE GOES HERE

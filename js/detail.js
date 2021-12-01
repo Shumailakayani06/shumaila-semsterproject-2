@@ -1,5 +1,6 @@
 import { url } from "../components.js";
 import { getProducts } from "../cartFunction.js";
+import menu from "./menu.js";
 const allProducts = document.querySelector(".all-products");
 const urlPro = url + "products";
 
@@ -19,13 +20,14 @@ if(getId != null){
 }
 
 
-
+menu();
 
 async function getData(){
 
     try{
         const response = await fetch(allPro);
         const details = await response.json();
+        console.log(details);
         
         //console.log(details);
 
@@ -38,9 +40,7 @@ async function getData(){
         IMAGE GOES HERE
         <p>${details.description}</p>
         <p>${details.price}</p>
-        
-
-        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" >add to cart</button>
+        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" >add to cart</button>
         </div>
         `
     }catch(error){
@@ -50,20 +50,22 @@ async function getData(){
     //click event
     const cartBtn = document.querySelectorAll(".cartbtn");
 //console.log(cartBtn);
-cartBtn.forEach(button => {
+cartBtn.forEach((button) => {
     button.addEventListener("click", btnfunction);
   })
 }
 
 //handle button function 
-function btnfunction(){
+ function btnfunction(){
     
     //event.target.classsList.toggle(".")
 
     const id = this.dataset.id;
     const title = this.dataset.title;
+    const price = this.dataset.price;
+  
 
-    console.log("id", id);
+    console.log("price", price);
 
    const currentCart =  getProducts();
   
@@ -75,7 +77,7 @@ function btnfunction(){
 
    if(itemExist === undefined){
 
-    const product = {id: id, title: title};
+    const product = {id: id, title: title, price: price};
 
     currentCart.push(product);
  

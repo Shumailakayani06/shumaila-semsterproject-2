@@ -40,7 +40,7 @@ async function getProducts(){
         
         products.innerHTML += `
         
-        <div>
+        <div class="pDiv">
         <a href="/detail.html?id=${item.id}"">
         <h2>${item.title}</h2>
         <p>${item.price}</p>

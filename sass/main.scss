@@ -1,0 +1,19 @@
+@use './partials/mixins';
+@use './partials/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pDiv{
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    display: inline-block;
+
+    h2{
+        margin-bottom: 1em;
+    }
+}

@@ -1,4 +1,6 @@
 import { url } from "../components.js";
+import menu from "./menu.js";
+
 const featuredProducts = document.querySelector(".featured-products");
 const urlPro = url + "products";
 
@@ -17,7 +19,7 @@ if(getId != null){
     getFeatured();
 }
 
-
+menu();
 async function getFeatured(){
 
     try{
@@ -32,6 +34,13 @@ async function getFeatured(){
         <h2>
         ${details.title}
         </h2>
+        <h2>
+        ${details.price}
+        </h2>
+        <h2>
+        ${details.description}
+        </h2>
+ 
         </div>
         `
 

@@ -4,26 +4,29 @@ import menu from "./menu.js";
 const productCart = getProducts();
 
 const cartProducts = document.querySelector(".cart-products");
-console.log(cartProducts);
+
 export const emptyCart = document.querySelector(".empty-cart");
 
 
 const allProducts = document.querySelector(".all-products");
 
 menu();
-
+if (productCart.length === 0){
+    allProducts.innerHTML = "empty cart";
+}
 
 productCart.forEach(product => {
-    allProducts.innerHTML = "";
+    
     
     allProducts.innerHTML += `
-    <div>
+    <div class="cart-div">
     IMAGE GOSE HERE
     <h2>${product.title}</h2>
-    <p>${product.price}</p>
+    <h2>${product.price}</h2>
     
     </div>
     `
+    console.log(product);
 
   
    
@@ -39,14 +42,6 @@ productCart.forEach(product => {
 
 
 
-//  function emptyCart(){
-//     if(allProducts.innerHTML = ""){
-   
-//         console.log("emptyyyyy")
-        
-//     }
-//     }
 
-//     emptyCart();
 
 

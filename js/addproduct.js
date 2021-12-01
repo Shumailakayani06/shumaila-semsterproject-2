@@ -40,7 +40,7 @@ async function addProduct(title, price, description){
 
     const data = JSON.stringify({title: title, price: price, description: description})
 
-    const tKey = gToken();
+    const token = gToken();
 
     const option = {
 
@@ -48,7 +48,7 @@ async function addProduct(title, price, description){
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${tKey}`,
+            Authorization: `Bearer ${token}`,
         },
     }
 

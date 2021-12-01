@@ -6,7 +6,7 @@ export function sToken(token){
 }
 
 export function gToken(){
-    gfStorage(tKey);
+     gfStorage(tKey);
 }
 
 export function sUser(user){
@@ -36,4 +36,5 @@ export function stStorage(key, value){
         return [];
     }
     return JSON.parse(value);
+    
 }

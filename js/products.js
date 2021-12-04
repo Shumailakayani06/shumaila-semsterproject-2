@@ -7,12 +7,6 @@ const urlPro = url + "products";
 let data=[];
 
 
-
-
-//filter searchbox
-
-
-
 // fetch featured products
 
 menu();
@@ -21,8 +15,8 @@ async function getProducts(){
     try{
         const response = await fetch(urlPro);
         data = await response.json();
-        console.log(data);
-
+        console.log(data.length);
+        
         displayProducts();
 
     }catch(error){
@@ -43,7 +37,7 @@ async function getProducts(){
         <div class="pDiv">
         <a href="/detail.html?id=${item.id}"">
         <h2>${item.title}</h2>
-        <p>${item.price}</p>
+        <p>price: ${item.price}</p>
         IMAGE GOES HERE
         </a>
         </div>
@@ -63,16 +57,19 @@ searchBar.onkeyup = function (){
             return true;
         }
 
-        if(searchValue.length <=1){
-            console.log("hello this is empty");
-            
-        }
+      
     })
     console.log(filteredProducts);
     data = filteredProducts;
+    console.log(data.length);
+    if(searchValue.length === 0){
+        getProducts();
+    }else{
+        console.log(data.length);
+        displayProducts(filteredProducts);
+    }
     
-    displayProducts(filteredProducts);
-    
+  
 }
 
 

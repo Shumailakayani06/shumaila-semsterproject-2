@@ -4,6 +4,8 @@ import { url } from "../components.js";
 
 
 
+
+
 menu();
 
 const from = document.querySelector("form");
@@ -31,6 +33,20 @@ function formSubmit(event){
     addProduct(titleV, priceV, descriptionV);
 
 }
+// const token = await gToken();
+export function getToken(){
+    const value = localStorage.getItem("token"); 
+
+    if(!value){
+        return [];
+    }
+    return JSON.parse(value);
+    
+}
+const token = getToken();
+console.log(token);
+
+
 
 
 async function addProduct(title, price, description){
@@ -40,7 +56,8 @@ async function addProduct(title, price, description){
 
     const data = JSON.stringify({title: title, price: price, description: description})
 
-    const token = gToken();
+   
+    
 
     const option = {
 
@@ -48,8 +65,8 @@ async function addProduct(title, price, description){
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-        },
+            "Authorization": "Bearer " +`${token}`
+        }
     }
 
     try{

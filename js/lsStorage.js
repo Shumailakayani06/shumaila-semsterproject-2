@@ -16,11 +16,17 @@ export function gToken(){
 }
 
 //sUser = save user
+//stStorage = save to storage
 export function sUser(user){
     stStorage(uKey, user);
 }
 
+// export function logOut(){
+//     localStorage.removeItem("user");
+// }
+
 //guName = get user name
+//gfStorage = get from localstrage
 export function guName(){
     const user = gfStorage(uKey);
 

@@ -1,4 +1,5 @@
 import {guName} from "./lsStorage.js";
+// import {logOUTBtn} from "./delete.js";
 
 
 
@@ -7,7 +8,7 @@ export default function menu(){
     const { pathname } = document.location;
     
     let userName = guName();
-    console.log(userName);
+    
     const menuSection = document.querySelector(".menu-c");
 
     let aLink = `<a href="/login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
@@ -15,7 +16,7 @@ export default function menu(){
     if(userName){
         aLink = `
         <a href="/addproduct.html" class="${pathname === "/addproduct.html" ? "active" : ""}">Add product</a>
-        <span> Hi ${userName}</span>`
+        <button id="logout">Logout ${userName}</button>`
     }
 
    menuSection.innerHTML = `
@@ -26,6 +27,9 @@ export default function menu(){
    ${aLink}
 
    </div>`
+
+// logOUTBtn();
+  
 }
 
 

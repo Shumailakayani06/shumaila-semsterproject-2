@@ -5,17 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/sass/main.css">
 </head>
 <body>
-    <div>
+
+    <div class="container">
         <div class="menu-c"></div>
-        <div class="created-product"></div>
-        <h1>Add Products</h1>
-        
+        <h1>EDIT PRODUCT</h1>
         <form>
             <div class="form-message"></div>
-
             <div>
                 <label for="title">Title</label>
                 <input id="title">
@@ -28,11 +25,17 @@
                 <label for="description">Description</label>
                 <textarea id="description"></textarea>
             </div>
-            <button>Add</button>
-          
+            <input id="id">
+            <div>
+                <button id="update">Update Product</button>
+            </div>
+
+            <div class="deleteproductButton"></div>
         </form>
+
     </div>
     
-    <script src="/js/addproduct.js" type="module"></script>
+
+    <script src="/js/edit.js" type="module"></script>
 </body>
 </html>

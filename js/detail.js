@@ -13,7 +13,7 @@ const getId = newParam.get("id");
 
 //if(!iD){window.location = "index.html"};
 
-console.log(typeof getId);
+
 const allPro = "http://localhost:1337/products/" + getId ;
 if(getId != null){
     getData();
@@ -41,6 +41,7 @@ async function getData(){
         <p>${details.description}</p>
         <p>${details.price}</p>
         <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" >add to cart</button>
+        <a href="/edit.html?id=${details.id}">EDIT</a>
         </div>
         `
     }catch(error){

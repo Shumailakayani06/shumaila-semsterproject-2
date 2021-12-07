@@ -15,7 +15,7 @@ async function getProducts(){
     try{
         const response = await fetch(urlPro);
         data = await response.json();
-        console.log(data.length);
+        
         
         displayProducts();
 
@@ -35,7 +35,7 @@ async function getProducts(){
         products.innerHTML += `
         
         <div class="pDiv">
-        <a href="/detail.html?id=${item.id}"">
+        <a href="/detail.html?id=${item.id}">
         <h2>${item.title}</h2>
         <p>price: ${item.price}</p>
         IMAGE GOES HERE

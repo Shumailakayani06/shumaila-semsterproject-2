@@ -1,4 +1,5 @@
-export  const url = "http://localhost:1337/"
+export  const url = "http://localhost:1337/";
+
 
 
 //ERROR AND SUCCESS MESSAGES
@@ -14,7 +15,12 @@ export function invalid(){
     export function successfull(){
         document.querySelector(".succesfull-login").innerHTML="Successfully Loged in"
         }
-    
+
+        
+
+
+
+   
 
         
 

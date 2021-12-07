@@ -8,14 +8,15 @@ import { url } from "../components.js";
 
 menu();
 
-const from = document.querySelector("form");
+const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const message = document.querySelector(".form-message");
+const createdProduct = document.querySelector(".created-product");
 
 
-from.addEventListener("submit", formSubmit);
+form.addEventListener("submit", formSubmit);
 
 function formSubmit(event){
     event.preventDefault();
@@ -24,7 +25,7 @@ function formSubmit(event){
     const titleV = title.value.trim();
     const priceV = parseFloat(price.value);
     const descriptionV = description.value.trim();
-    console.log("pricevalue", priceV)
+    
 
     if(titleV.length === 0 || priceV.length === 0 || isNaN(priceV) || descriptionV.length === 0){
        return message.innerHTML = "Please enter proper values";
@@ -56,9 +57,7 @@ async function addProduct(title, price, description){
 
     const data = JSON.stringify({title: title, price: price, description: description})
 
-   
     
-
     const option = {
 
         method: "POST",
@@ -72,7 +71,12 @@ async function addProduct(title, price, description){
     try{
        const response = await fetch(URL, option);
        const json = await response.json();
-       console.log(json);
+       
+
+       if(json.created_at){
+           createdProduct.innerHTML = "New product created successfully";
+           form.reset();
+       }
     }
     catch(error){
 console.log(error)

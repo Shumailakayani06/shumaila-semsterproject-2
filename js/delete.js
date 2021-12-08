@@ -1,5 +1,5 @@
      import { url } from "../components.js";
-     import { logOut } from "./lsStorage.js";
+     import { clearUser } from "./lsStorage.js";
      
      //Delete button for edit products
 
@@ -42,6 +42,8 @@
              }
              catch(error){
                  console.log(error);
+                 clearUser();
+                 location.href = "/index.html";
              }
              }
 
@@ -50,23 +52,3 @@
          }
      }
 
-
-     // LOG OUT SECTION
-
-    //  export function logOUTBtn(){
-    //      const btn = document.querySelectorAll("#logout");
-         
-
-    //      if(btn){
-    //          btn.onclick = function () {
-    //             console.log(btn);
-    //              const wantToLogOut = confirm("Log out?");
-
-    //              if(wantToLogOut){
-    //                 logOut();
-    //                 location.href = "/index.html";
-    //              }
-    //          }
-    //      }
-    //  }
- 

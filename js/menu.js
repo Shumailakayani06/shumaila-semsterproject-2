@@ -1,5 +1,6 @@
 import {guName} from "./lsStorage.js";
-// import {logOUTBtn} from "./delete.js";
+import { clearUser } from "./lsStorage.js";
+
 
 
 
@@ -28,9 +29,29 @@ export default function menu(){
 
    </div>`
 
-// logOUTBtn();
-  
+
+  logOUT();
 }
 
+
+
+    // LOG OUT SECTION
+
+    export function logOUT() {
+
+        const btn = document.querySelector("#logout");
+    
+        if(btn){
+            btn.onclick = function () {
+                const confirmLogOut = confirm("Log out?");
+    
+                if(confirmLogOut){
+                    clearUser();
+                    location.href="/index.html";
+                }
+            }
+        }
+     }
+     
 
 

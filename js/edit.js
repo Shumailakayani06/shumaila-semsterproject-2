@@ -10,9 +10,7 @@ const newParam = new URLSearchParams (qString);
 const getId = newParam.get("id");
 
 menu();
-//console.log(getId)
 
-//if(!iD){window.location = "index.html"};
 
 const allPro = "http://localhost:1337/products/" + getId ;
 
@@ -73,7 +71,7 @@ async function editProduct(title, price, description, id){
         body: data,
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " +`${token}`
+            Authorization: "Bearer " +`${token}`
         }
     }
 

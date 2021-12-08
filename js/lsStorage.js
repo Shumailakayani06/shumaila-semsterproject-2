@@ -21,9 +21,9 @@ export function sUser(user){
     stStorage(uKey, user);
 }
 
-// export function logOut(){
-//     localStorage.removeItem("user");
-// }
+export function clearUser(){
+    localStorage.removeItem(uKey);
+}
 
 //guName = get user name
 //gfStorage = get from localstrage

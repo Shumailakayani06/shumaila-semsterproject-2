@@ -4,6 +4,7 @@ import menu from "./menu.js";
 const productCart = getProducts();
 
 const cartProducts = document.querySelector(".cart-products");
+const cartTotal = document.querySelector(".cart-total")
 
 export const emptyCart = document.querySelector(".empty-cart");
 
@@ -31,6 +32,16 @@ productCart.forEach(product => {
   
    
 });
+
+let total = 0;
+
+for(let i = 0; i < productCart.length; i++){
+    let price = parseFloat(productCart[i].price);
+
+    total += price;
+}
+
+cartTotal.innerHTML = "Total" + total + "nok";
 
 
 

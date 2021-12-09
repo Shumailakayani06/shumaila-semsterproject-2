@@ -14,20 +14,21 @@ async function getProducts(){
         const response = await fetch(urlPro);
         data = await response.json();
         console.log(data);
+        
 
         products.innerHTML = "";
 
         data.forEach((item) =>{
             if(item.featured === true){
-            
+
+                console.log(data[5].image);
             
             products.innerHTML += `
             
             <div class="pDiv">
             <a href="/featured.html?id=${item.id}"">
             <h2>${item.title}</h2>
-            IMGAE GOES HERE
-            
+            <img src="${item.image_url}" alt="${item.title}">
             </a>
             </div>
             

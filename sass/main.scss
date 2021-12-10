@@ -1,24 +1,16 @@
-@use './partials/mixins';
-@use './partials/variables';
+@import './partials/navbar.scss';
+@import './partials/herobanner';
+@import './partials/productCard';
+@import './partials/buttons';
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "montserrat";
 }
 
-.herobanner{
-    background-image: url(/herobanne.jpeg);
-    height: 90vh;
-}
 
-.pDiv{
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid black;
-    display: inline-block;
 
-    h2{
-        margin-bottom: 1em;
-    }
-}
+

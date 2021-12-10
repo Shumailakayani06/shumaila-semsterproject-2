@@ -12,6 +12,7 @@ export const emptyCart = document.querySelector(".empty-cart");
 const allProducts = document.querySelector(".all-products");
 
 menu();
+
 if (productCart.length === 0){
     allProducts.innerHTML = "empty cart";
 }
@@ -42,6 +43,16 @@ for(let i = 0; i < productCart.length; i++){
 }
 
 cartTotal.innerHTML = "Total" + total + "nok";
+
+
+
+
+export function cartItems(){
+    const cartNumb = document.querySelector('.fa-shopping-cart');
+console.log(cartNumb);
+
+    cartNumb.innerHTML = productCart.length;
+}
 
 
 

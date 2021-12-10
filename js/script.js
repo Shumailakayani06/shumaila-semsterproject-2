@@ -1,5 +1,6 @@
 import { url } from "../components.js";
 import menu from "./menu.js";
+
 const products = document.querySelector(".featured-products");
 const urlPro = url + "products";
 let data=[];
@@ -9,6 +10,7 @@ let data=[];
 
 // display featured products
 menu();
+
 async function getProducts(){
     try{
         const response = await fetch(urlPro);
@@ -28,7 +30,7 @@ async function getProducts(){
             <div class="pDiv">
             <a href="/featured.html?id=${item.id}"">
             <h2>${item.title}</h2>
-            <img src="${item.image_url}" alt="${item.title}">
+            <img src="${item.image}" alt="${item.title}"/>
             </a>
             </div>
             
@@ -44,3 +46,4 @@ async function getProducts(){
 }
 
 getProducts();
+

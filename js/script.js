@@ -23,20 +23,24 @@ async function getProducts(){
         data.forEach((item) =>{
             if(item.featured === true){
 
-                console.log(data[5].image);
+                console.log(data[5].image.url);
+                
             
             products.innerHTML += `
             
             <div class="pDiv">
             <a href="/featured.html?id=${item.id}"">
+            <img src='http://localhost:1337${item.image.url}'/> 
             <h2>${item.title}</h2>
-            <img src="${item.image}" alt="${item.title}"/>
             </a>
+            <p>products info</p>
             </div>
             
             `
             }
         })
+
+        // <img src="${item.image}" alt="${item.title}"/>
             
        
 

@@ -22,13 +22,13 @@ productCart.forEach(product => {
     
     allProducts.innerHTML += `
     <div class="cart-div">
-    IMAGE GOSE HERE
+    <img src='http://localhost:1337${product.image}'/> 
     <h2>${product.title}</h2>
     <h2>${product.price}</h2>
     
     </div>
     `
-    console.log(product);
+    console.log(productCart);
 
   
    
@@ -42,17 +42,17 @@ for(let i = 0; i < productCart.length; i++){
     total += price;
 }
 
-cartTotal.innerHTML = "Total" + total + "nok";
+cartTotal.innerHTML = "Total : " + total + " nok ";
 
 
 
 
-export function cartItems(){
-    const cartNumb = document.querySelector('.fa-shopping-cart');
-console.log(cartNumb);
+// export function cartItems(){
+//     const cartNumb = document.querySelector('.fa-shopping-cart');
+// console.log(cartNumb);
 
-    cartNumb.innerHTML = productCart.length;
-}
+//     cartNumb.innerHTML = productCart.length;
+// }
 
 
 

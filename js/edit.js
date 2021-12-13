@@ -4,12 +4,12 @@ import deleteB from "./delete.js";
 import menu from "./menu.js";
 const allProducts = document.querySelector(".all-products");
 const urlPro = url + "products";
-
+menu();
 const qString = document.location.search;
 const newParam = new URLSearchParams (qString);
 const getId = newParam.get("id");
 
-menu();
+
 
 
 const allPro = "http://localhost:1337/products/" + getId ;

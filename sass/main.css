@@ -1,16 +1,17 @@
 .menu-c {
   background-color: black;
-  height: 10vh;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  box-shadow: 3px 3px 5px gray; }
   .menu-c a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     margin: 2em;
-    line-height: 70px;
+    line-height: 60px;
     cursor: pointer;
     transition: 0.5s;
     letter-spacing: 1px; }
@@ -18,8 +19,8 @@
     color: #cfbeb6; }
 
 .extra-info {
-  background-color: #cfbeb6;
-  height: 5vh;
+  background-color: #d8d8d8;
+  height: 4vh;
   margin-bottom: 1em;
   color: #313030;
   display: flex;
@@ -36,17 +37,191 @@
     .extra-info li i {
       margin-right: 0.8em; }
 
+.active {
+  text-decoration: underline;
+  color: red; }
+
 .herobanner {
-  background-image: url(/herobanne.jpeg);
-  height: 90vh; }
+  background-image: url(/HeroBannerr.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 5px gray; }
+
+.banner1 {
+  background-image: url(/christmas\ gift.jpeg);
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 5px gray;
+  color: white;
+  margin: 4em 0; }
+
+.herobanner a {
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+  margin: 2em;
+  position: absolute;
+  bottom: 25%;
+  width: 200px;
+  text-align: center; }
+
+.herobanner a:hover {
+  background-color: lightgray;
+  color: black; }
+
+.slogan {
+  position: absolute;
+  bottom: 50%;
+  width: 500px;
+  margin-left: 2em; }
+
+.sloganp {
+  position: absolute;
+  bottom: 45%;
+  width: 500px;
+  margin-left: 2em; }
+
+/* LOGO */
+.logo {
+  width: 250px; }
+
+/* SUBSCRIBE SECTION */
+.subDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(/subscribe1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3em;
+  border-bottom: 2px solid white;
+  height: 50vh;
+  margin: 0; }
+
+.subDiv h3 {
+  color: white;
+  font-size: 1.8em;
+  max-width: 500px;
+  letter-spacing: 1px;
+  float: right; }
+
+.emailSect {
+  margin-left: 1em; }
+
+.emailSect input {
+  padding: 1em 3em;
+  border: none;
+  float: right;
+  margin-top: 2em; }
+
+.emailSect a {
+  padding: 0.7em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1.7em; }
+
+.emailSect a i {
+  margin-left: 8px;
+  font-size: 20px; }
+
+.featured-products {
+  margin: 1em; }
 
 .pDiv {
-  margin: 1em;
+  margin: 5em 1em;
   padding: 1em;
-  border: 1px solid black;
-  display: inline-block; }
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer; }
+  .pDiv img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 3px 2px 2px darkgray; }
   .pDiv h2 {
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    color: black; }
+  .pDiv a {
+    text-decoration: none;
+    transition: 0.5s ease; }
+  .pDiv a:hover {
+    opacity: 50%; }
+
+.featured-products {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+/* CATEGORY */
+.categoryDiv h2 {
+  font-weight: 500;
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-left: 1.5em;
+  font-family: "Mohave", sans-serif;
+  letter-spacing: 3px; }
+
+.categoryDiv {
+  margin: 2em;
+  margin-bottom: 5em; }
+  .categoryDiv a {
+    color: black;
+    text-decoration: none; }
+
+.categoryDiv img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0.8em;
+  box-shadow: 3px 3px 3px 3px lightgray;
+  transition: 0.5s;
+  cursor: pointer; }
+
+.categoryDiv img:hover {
+  opacity: 50%; }
+
+.imgCateDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.imgText {
+  text-align: center; }
+
+.shophereDiv {
+  margin: 2em 3em; }
+
+.shophereBtn {
+  padding: 0.7em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none; }
+
+.ViewAllP {
+  padding: 0.7em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none; }
+
+.veiwAllProducts {
+  margin: 7em 4em; }
 
 .logoutBtn {
   background-color: #cfbeb6;
@@ -55,6 +230,64 @@
   height: 25px;
   font-family: "montserrat";
   border: none; }
+
+.searchWrapper input {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-left: 1px solid grey;
+  margin-top: 1em; }
+
+.searchWrapper {
+  margin-left: 1em; }
+
+.cart-div {
+  background-color: darkgray;
+  display: block;
+  margin: 1em;
+  padding: 1em; }
+
+/* FOOTER SECTION */
+footer {
+  text-align: center;
+  background-color: #A2A2A2;
+  height: 75vh;
+  margin: 0; }
+  footer a {
+    color: black;
+    text-decoration: none; }
+
+footer h3 {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+  padding: 2em 0;
+  font-weight: 400;
+  font-family: 'Comfortaa', cursive; }
+
+.footerDiv {
+  text-align: center; }
+
+.footerDiv ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.footerDiv li {
+  list-style: none;
+  border-right: 1px solid black;
+  padding: 0 1.5em;
+  margin: 2em 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s; }
+
+.footerDiv li:hover {
+  opacity: 50%;
+  color: #FFA9BF; }
+
+footer img {
+  margin-bottom: 2em; }
 
 * {
   margin: 0;

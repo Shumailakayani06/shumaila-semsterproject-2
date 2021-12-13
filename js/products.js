@@ -25,10 +25,12 @@ async function getProducts(){
     }
 }
 
+// http://localhost:1337/uploads/haircare_b1a023a6cf.webp
 
 // display featured products
  function displayProducts() {
-
+// console.log(data[5].image.url);
+console.log(data);
     products.innerHTML = "";
 
     data.forEach((item) =>{
@@ -37,16 +39,18 @@ async function getProducts(){
         
         <div class="pDiv">
         <a href="/detail.html?id=${item.id}">
+        <img src='http://localhost:1337${item.image.url}'/> 
+        </a>
         <h2>${item.title}</h2>
         <p>price: ${item.price}</p>
-        <img src="${item.image}"/>
-        </a>
         </div>
         
         `
     })
 
 }
+
+
 
 searchBar.onkeyup = function (){
     //console.log(event);

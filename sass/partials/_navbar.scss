@@ -3,20 +3,20 @@
 .menu-c{
     
     background-color: black;
-    height: 10vh;
+    height: 8vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-shadow: 3px 3px 5px gray;
     
-  
 
     a{
         color: white;
         text-decoration: none;
         font-size: 18px;
         margin: 2em;
-        line-height: 70px;
+        line-height: 60px;
         cursor: pointer;
         transition: 0.5s;
         letter-spacing: 1px;
@@ -29,13 +29,15 @@
         
     }
 
+   
+
     
 }
 
 
 .extra-info{
-    background-color: #cfbeb6;
-    height: 5vh;
+    background-color: #d8d8d8;
+    height: 4vh;
     margin-bottom: 1em;
     color: rgb(49, 48, 48);
     display: flex;
@@ -59,6 +61,12 @@
             margin-right: 0.8em;
         }
     }
+}
+
+
+.active{
+    text-decoration: underline;
+    color: red;
 }
 
 

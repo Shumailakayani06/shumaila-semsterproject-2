@@ -1,6 +1,6 @@
 import {guName} from "./lsStorage.js";
 import { clearUser } from "./lsStorage.js";
-import { cartItems } from "./cart.js";
+// import { cartItems } from "./cart.js";
 
 
 
@@ -27,7 +27,7 @@ export default function menu(){
    <div class="menu">
    <a href="/index.html" class="${pathname === "/" || pathname ==="/index.html" ? "active" : ""}">Home</a>
    <a href="/products.html" class="${pathname === "/products.html" ? "active" : ""}">Products</a>
-   <a href="/cart.html" class="${pathname === "/cart.html" ? "active" : ""}"><i class="fas fa-shopping-cart">cart</i></a>
+   <a href="/cart.html" class="${pathname === "/cart.html" ? "active" : ""}"><i class="fas fa-shopping-cart"></i></a>
    
    ${aLink}
 
@@ -35,7 +35,7 @@ export default function menu(){
 
 
   logOUT();
-  cartItems();
+//   cartItems();
 }
 
 

@@ -27,9 +27,9 @@ async function getData(){
     try{
         const response = await fetch(allPro);
         const details = await response.json();
-        console.log(details);
         
-        //console.log(details);
+        
+        console.log(details);
 
         allProducts.innerHTML = "";
         allProducts.innerHTML += `
@@ -37,13 +37,15 @@ async function getData(){
         <h2>
         ${details.title}
         </h2>
-        IMAGE GOES HERE
+        <img src='http://localhost:1337${details.image.url}'/> 
         <p>${details.description}</p>
         <p>${details.price}</p>
-        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" >add to cart</button>
+        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image="http://localhost:1337${details.image.url}">add to cart</button>
         <a href="/edit.html?id=${details.id}">EDIT</a>
         </div>
         `
+
+        console.log(details.image.url)
     }catch(error){
         console.log("error");
     }
@@ -64,9 +66,10 @@ cartBtn.forEach((button) => {
     const id = this.dataset.id;
     const title = this.dataset.title;
     const price = this.dataset.price;
+    const image = this.dataset.image;
   
 
-    console.log("price", price);
+    console.log("image", image);
 
    const currentCart =  getProducts();
   
@@ -78,7 +81,7 @@ cartBtn.forEach((button) => {
 
    if(itemExist === undefined){
 
-    const product = {id: id, title: title, price: price};
+    const product = {id: id, image: image, title: title, price: price};
 
     currentCart.push(product);
  

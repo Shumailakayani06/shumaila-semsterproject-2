@@ -1,4 +1,122 @@
 .herobanner{
-    background-image: url(/herobanne.jpeg);
+    background-image: url(/HeroBannerr.jpg);
     height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 5px gray;
 }
+
+.banner1{
+    background-image: url(/christmas\ gift.jpeg);
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 5px gray;
+    color: white;
+    margin: 4em 0;
+}
+
+
+.herobanner a {
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    margin: 2em;
+    position: absolute;
+    bottom: 25%;
+    width: 200px;
+    text-align: center;
+   
+  }
+  .herobanner a:hover {
+    background-color: lightgray;
+    color: black;
+  }
+
+  .slogan {
+    position: absolute;
+    bottom: 50%;
+    width: 500px;
+    margin-left: 2em;
+  }
+
+  .sloganp {
+    position: absolute;
+    bottom: 45%;
+    width: 500px;
+    margin-left: 2em;
+  }
+
+
+ /* LOGO */
+
+ .logo{
+     width: 250px;
+ }
+
+
+  /* SUBSCRIBE SECTION */
+
+.subDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(/subscribe1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3em;
+    border-bottom: 2px solid white;
+    height: 50vh;
+    margin: 0;
+    
+  
+
+  }
+  
+  .subDiv h3 {
+    color: white;
+    font-size: 1.8em;
+    max-width: 500px;
+    letter-spacing: 1px;
+    float: right;
+    
+  }
+  
+  .emailSect {
+    margin-left: 1em;
+
+  }
+  
+  .emailSect input {
+    padding: 1em 3em;
+    border: none;
+    float: right;
+    margin-top: 2em;
+
+  }
+  .emailSect a {
+    padding: 0.7em 2em;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    float: right;
+    margin-top: 1.7em;
+
+  }
+  .emailSect a i {
+    margin-left: 8px;
+    font-size: 20px;
+  }
+
+
+
+
+
+
+

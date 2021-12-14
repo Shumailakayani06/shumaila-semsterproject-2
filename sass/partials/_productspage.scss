@@ -1,0 +1,46 @@
+.productHeading{
+    align-items: center;
+    text-align: center;
+
+    h1{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        
+    }
+    
+}
+
+//shop this look
+
+.productspageLook{
+    margin: 2em 0;
+}
+
+.lookheadingproductspage{
+    position: absolute;
+    bottom: -90%;
+    right: 10%;
+ 
+}
+
+.lookpproductspage{
+    position: absolute;
+    bottom: -100%;
+    right: 10%;
+}
+
+
+  //shop by look button
+
+  .lookshopNowBtnproduct{
+    padding: 0.7em 2em;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: -110%;
+    right: 10%;
+  }

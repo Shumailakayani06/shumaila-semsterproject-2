@@ -1,5 +1,5 @@
 .herobanner{
-    background-image: url(/HeroBannerr.jpg);
+    background-image: url(/images/HeroBannerr.jpg);
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,13 +7,20 @@
 }
 
 .banner1{
-    background-image: url(/christmas\ gift.jpeg);
+    background-image: url(/images/gift.jpg);
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 3px 3px 5px gray;
     color: white;
     margin: 4em 0;
+
+    h2{
+        position: absolute;
+        right: 15%;
+        bottom: -182%;
+        font-size: 50px;
+    }
 }
 
 
@@ -25,15 +32,15 @@
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
-    margin: 2em;
+    left: 9%;
     position: absolute;
-    bottom: 25%;
+    bottom: 29%;
     width: 200px;
     text-align: center;
    
   }
   .herobanner a:hover {
-    background-color: lightgray;
+    background-color: #FFA9BF;
     color: black;
   }
 
@@ -42,6 +49,8 @@
     bottom: 50%;
     width: 500px;
     margin-left: 2em;
+    font-family: 'Comfortaa', cursive;
+    
   }
 
   .sloganp {
@@ -59,61 +68,27 @@
  }
 
 
-  /* SUBSCRIBE SECTION */
 
-.subDiv {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-image: url(/subscribe1.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 3em;
-    border-bottom: 2px solid white;
-    height: 50vh;
-    margin: 0;
-    
-  
+ /* new arrival */
+ .newArrivalHeading{
+     margin: 3em;
+     align-items: center;
+     
+     h1{
+         margin: 1em 0;
+         font-family:  'Mohave', sans-serif;
+         letter-spacing: 3px;
+         font-weight: 400;
+     }
 
-  }
-  
-  .subDiv h3 {
-    color: white;
-    font-size: 1.8em;
-    max-width: 500px;
-    letter-spacing: 1px;
-    float: right;
-    
-  }
-  
-  .emailSect {
-    margin-left: 1em;
+     span{
+         font-weight: 400;
+         font-size: 20px;
+     }
+ }
 
-  }
-  
-  .emailSect input {
-    padding: 1em 3em;
-    border: none;
-    float: right;
-    margin-top: 2em;
 
-  }
-  .emailSect a {
-    padding: 0.7em 2em;
-    background-color: black;
-    color: white;
-    letter-spacing: 1px;
-    cursor: pointer;
-    float: right;
-    margin-top: 1.7em;
-
-  }
-  .emailSect a i {
-    margin-left: 8px;
-    font-size: 20px;
-  }
-
+ 
 
 
 

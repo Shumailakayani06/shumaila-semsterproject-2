@@ -24,7 +24,7 @@
     }
 
     a:hover{
-       color: #cfbeb6;
+       color: #FFA9BF;
        
         
     }
@@ -72,4 +72,12 @@
 
 .fa-shopping-cart{
     
+}
+
+
+.searchbarAndLogo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

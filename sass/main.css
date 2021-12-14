@@ -16,7 +16,7 @@
     transition: 0.5s;
     letter-spacing: 1px; }
   .menu-c a:hover {
-    color: #cfbeb6; }
+    color: #FFA9BF; }
 
 .extra-info {
   background-color: #d8d8d8;
@@ -41,21 +41,32 @@
   text-decoration: underline;
   color: red; }
 
+.searchbarAndLogo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
 .herobanner {
-  background-image: url(/HeroBannerr.jpg);
+  background-image: url(/images/HeroBannerr.jpg);
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 3px 3px 5px gray; }
 
 .banner1 {
-  background-image: url(/christmas\ gift.jpeg);
+  background-image: url(/images/gift.jpg);
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 3px 3px 5px gray;
   color: white;
   margin: 4em 0; }
+  .banner1 h2 {
+    position: absolute;
+    right: 15%;
+    bottom: -182%;
+    font-size: 50px; }
 
 .herobanner a {
   background-color: black;
@@ -65,21 +76,22 @@
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
-  margin: 2em;
+  left: 9%;
   position: absolute;
-  bottom: 25%;
+  bottom: 29%;
   width: 200px;
   text-align: center; }
 
 .herobanner a:hover {
-  background-color: lightgray;
+  background-color: #FFA9BF;
   color: black; }
 
 .slogan {
   position: absolute;
   bottom: 50%;
   width: 500px;
-  margin-left: 2em; }
+  margin-left: 2em;
+  font-family: 'Comfortaa', cursive; }
 
 .sloganp {
   position: absolute;
@@ -91,54 +103,24 @@
 .logo {
   width: 250px; }
 
-/* SUBSCRIBE SECTION */
-.subDiv {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-image: url(/subscribe1.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 3em;
-  border-bottom: 2px solid white;
-  height: 50vh;
-  margin: 0; }
-
-.subDiv h3 {
-  color: white;
-  font-size: 1.8em;
-  max-width: 500px;
-  letter-spacing: 1px;
-  float: right; }
-
-.emailSect {
-  margin-left: 1em; }
-
-.emailSect input {
-  padding: 1em 3em;
-  border: none;
-  float: right;
-  margin-top: 2em; }
-
-.emailSect a {
-  padding: 0.7em 2em;
-  background-color: black;
-  color: white;
-  letter-spacing: 1px;
-  cursor: pointer;
-  float: right;
-  margin-top: 1.7em; }
-
-.emailSect a i {
-  margin-left: 8px;
-  font-size: 20px; }
+/* new arrival */
+.newArrivalHeading {
+  margin: 3em;
+  align-items: center; }
+  .newArrivalHeading h1 {
+    margin: 1em 0;
+    font-family: 'Mohave', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; }
+  .newArrivalHeading span {
+    font-weight: 400;
+    font-size: 20px; }
 
 .featured-products {
   margin: 1em; }
 
 .pDiv {
-  margin: 5em 1em;
+  margin: 5em 2em;
   padding: 1em;
   width: 300px;
   height: 300px;
@@ -149,9 +131,11 @@
     width: 300px;
     height: 300px;
     box-shadow: 3px 2px 2px darkgray; }
-  .pDiv h2 {
-    margin-bottom: 1em;
-    color: black; }
+  .pDiv h3 {
+    margin: 2em 1em;
+    color: grey; }
+  .pDiv p {
+    margin: 0.5em; }
   .pDiv a {
     text-decoration: none;
     transition: 0.5s ease; }
@@ -164,7 +148,14 @@
   flex-direction: row;
   flex-wrap: wrap; }
 
-/* CATEGORY */
+/*product page card*/
+.productspage img {
+  width: 200px;
+  height: 200px; }
+.productspage i {
+  color: #f3cc1d; }
+
+/* CATEGORY  SECTION*/
 .categoryDiv h2 {
   font-weight: 500;
   font-size: 2em;
@@ -201,6 +192,14 @@
 .imgText {
   text-align: center; }
 
+.logoutBtn {
+  background-color: #cfbeb6;
+  color: black;
+  width: 80px;
+  height: 25px;
+  font-family: "montserrat";
+  border: none; }
+
 .shophereDiv {
   margin: 2em 3em; }
 
@@ -221,15 +220,16 @@
   text-decoration: none; }
 
 .veiwAllProducts {
-  margin: 7em 4em; }
+  margin: 10em 4em;
+  text-align: center; }
 
-.logoutBtn {
-  background-color: #cfbeb6;
+.pDiv button {
+  background-color: #ffbdcd;
+  width: 150px;
+  height: 40px;
+  border: none;
   color: black;
-  width: 80px;
-  height: 25px;
-  font-family: "montserrat";
-  border: none; }
+  cursor: pointer; }
 
 .searchWrapper input {
   width: 250px;
@@ -288,6 +288,105 @@ footer h3 {
 
 footer img {
   margin-bottom: 2em; }
+
+/* SUBSCRIBE SECTION */
+.subDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(/images/subscribe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3em;
+  border-bottom: 2px solid white;
+  height: 70vh;
+  margin: 0; }
+
+.subDiv h3 {
+  color: white;
+  font-size: 1.8em;
+  max-width: 500px;
+  letter-spacing: 1px; }
+
+.emailSect {
+  margin-left: 1em; }
+
+.emailSect input {
+  padding: 1em 3em;
+  border: none;
+  margin-top: 2em; }
+
+.emailSect a {
+  padding: 0.8em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 2em; }
+
+.emailSect a i {
+  margin-left: 8px;
+  font-size: 20px; }
+
+.shopbyLook {
+  background-image: url(/images/look.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.lookheading {
+  position: absolute;
+  bottom: -350%;
+  right: 10%; }
+
+.lookp {
+  position: absolute;
+  bottom: -360%;
+  right: 10%; }
+
+.lookshopNowBtn {
+  padding: 0.7em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  bottom: -380%;
+  right: 10%; }
+
+.productHeading {
+  align-items: center;
+  text-align: center; }
+  .productHeading h1 {
+    font-family: 'Mohave', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; }
+
+.productspageLook {
+  margin: 2em 0; }
+
+.lookheadingproductspage {
+  position: absolute;
+  bottom: -90%;
+  right: 10%; }
+
+.lookpproductspage {
+  position: absolute;
+  bottom: -100%;
+  right: 10%; }
+
+.lookshopNowBtnproduct {
+  padding: 0.7em 2em;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  bottom: -110%;
+  right: 10%; }
 
 * {
   margin: 0;

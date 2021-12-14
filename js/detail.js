@@ -28,7 +28,7 @@ async function getData(){
         const response = await fetch(allPro);
         const details = await response.json();
         
-        
+        console.log(details.image.url)
         console.log(details);
 
         allProducts.innerHTML = "";
@@ -45,7 +45,7 @@ async function getData(){
         </div>
         `
 
-        console.log(details.image.url)
+        
     }catch(error){
         console.log("error");
     }

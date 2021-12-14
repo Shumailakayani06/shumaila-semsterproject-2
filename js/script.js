@@ -29,11 +29,11 @@ async function getProducts(){
             products.innerHTML += `
             
             <div class="pDiv">
-            <a href="/featured.html?id=${item.id}"">
+            <a href="/detail.html?id=${item.id}"">
             <img src='http://localhost:1337${item.image.url}'/> 
-            <h2>${item.title}</h2>
+            <h3>${item.title}</h3>
+            <button>View product</button>
             </a>
-            <p>products info</p>
             </div>
             
             `

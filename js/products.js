@@ -41,8 +41,15 @@ console.log(data);
         <a href="/detail.html?id=${item.id}">
         <img src='http://localhost:1337${item.image.url}'/> 
         </a>
-        <h2>${item.title}</h2>
-        <p>price: ${item.price}</p>
+        <h3>${item.title}</h3>
+        <p> ${item.price} Nok</p>
+        <p> <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i> 
+    </p>
+        
         </div>
         
         `

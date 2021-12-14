@@ -12,6 +12,7 @@ export default function menu(){
     let userName = guName();
     
     const menuSection = document.querySelector(".menu-c");
+    const editbtn = document.querySelector(".editBtnDiv")
 
     let aLink = `<a href="/login.html" class="${pathname === "/login.html" ? "active" : ""}">Login <i class="fas fa-user"></i></a>`;
 
@@ -32,6 +33,8 @@ export default function menu(){
    ${aLink}
 
    </div>`
+
+  
 
 
   logOUT();

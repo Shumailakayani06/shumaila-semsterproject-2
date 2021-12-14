@@ -1,3 +1,5 @@
+
+//logout button
 .logoutBtn{
     background-color: #cfbeb6;
     color: black;
@@ -6,3 +8,48 @@
     font-family: "montserrat";
     border: none;
 }
+
+
+//shop here button
+.shophereDiv{
+    margin: 2em 3em;
+}
+  .shophereBtn{
+    padding: 0.7em 2em;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+
+
+
+//view all product button
+  .ViewAllP{
+    padding: 0.7em 2em;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+
+  .veiwAllProducts{
+      margin: 10em 4em;
+      text-align: center;
+
+  }
+
+
+  .pDiv button{
+      background-color: #ffbdcd;
+      width: 150px;
+      height: 40px;
+      border: none;
+      color: black;
+      cursor: pointer;
+
+  }

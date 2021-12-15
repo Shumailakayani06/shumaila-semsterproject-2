@@ -1,6 +1,7 @@
 import { getProducts } from "../cartFunction.js";
 import menu from "./menu.js";
 
+
 const productCart = getProducts();
 
 const cartProducts = document.querySelector(".cart-products");
@@ -18,13 +19,13 @@ if (productCart.length === 0){
 }
 
 productCart.forEach(product => {
-    
+    console.log(product.image)
     
     allProducts.innerHTML += `
     <div class="cart-div">
-    <img src='http://localhost:1337${product.image}'/> 
+    <img src="${product.image}"/> 
     <h2>${product.title}</h2>
-    <h2>${product.price}</h2>
+    <h2>${product.price} Nok</h2>
     
     </div>
     `
@@ -42,7 +43,7 @@ for(let i = 0; i < productCart.length; i++){
     total += price;
 }
 
-cartTotal.innerHTML = "Total : " + total + " nok ";
+cartTotal.innerHTML = "Total : " + total + " Nok ";
 
 
 

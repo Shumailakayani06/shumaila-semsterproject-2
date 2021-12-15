@@ -62,13 +62,13 @@ async function addProduct(title, price, description, image){
      const imageSplit = image.split("\\");
      let newimage ="http://localhost:1337/uploads/" + imageSplit[2];
 
-     console.log(typeof image); 
+     console.log(newimage); 
 
     const data = JSON.stringify(
         {title: title,
              price: price,
               description: description, 
-              image_url: newimage})
+              image: newimage})
 
     
     const option = {

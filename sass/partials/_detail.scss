@@ -1,0 +1,88 @@
+.productdetailHeading{
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
+
+    h1{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        
+    }
+    
+}
+
+.all-products{
+    margin: 3em 0;
+    text-align: center;
+    align-items: center;
+  
+
+    img{
+        width: 400px;
+    }
+
+    h2{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-bottom: 2em;
+        padding-top: 2em;
+    }
+
+    p{
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 3px;
+        max-width: 450px;
+       text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+       
+    }
+
+    button{
+        padding: 0.7em 2em;
+        background-color: black;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 2em 2em;
+    }
+
+    a{
+        background-color: #ffbdcd;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 0.6em 2em;
+    }
+}
+
+.cartdiv{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+ 
+
+}
+
+// .detail-left, .detail-right {
+//     display:block;
+//     text-align: center;
+//     align-items: center;
+//     padding:2em;
+   
+// }
+
+// .detail-right{
+//     max-width: 450px;
+//     text-align: center;
+//     border-left: 1px solid lightgray;
+//     align-items: center;
+// }

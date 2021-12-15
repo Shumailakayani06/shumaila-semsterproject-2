@@ -1,0 +1,69 @@
+.addProductHeading {
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
+
+    h1{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        
+    }
+    
+}
+
+.addProductForm{
+  
+    margin: 3em 2em;
+
+    input{
+        margin: 1em;
+    }
+
+    button{
+        padding: 0.7em 2em;
+        background-color: black;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+
+.form-message{
+   
+    color: rgb(167, 113, 67);
+   display: inline-block;
+
+}
+
+.created-product{
+    color: seagreen;
+    margin: 2em;
+}
+
+
+// EDIT
+
+.editHeading {
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
+
+    h1{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        
+    }
+    
+}
+
+.editContainer{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+

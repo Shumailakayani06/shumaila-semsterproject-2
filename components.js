@@ -5,7 +5,7 @@ export  const url = "http://localhost:1337/";
 //ERROR AND SUCCESS MESSAGES
 
 export function displaymessage(){
-document.querySelector(".message-c").innerHTML="please enter valid credentials "
+document.querySelector(".message-c").innerHTML="Please enter valid credentials "
 }
 
 export function invalid(){

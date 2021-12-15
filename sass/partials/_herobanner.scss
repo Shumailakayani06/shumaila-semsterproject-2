@@ -13,12 +13,12 @@
     background-repeat: no-repeat;
     box-shadow: 3px 3px 5px gray;
     color: white;
-    margin: 4em 0;
+    margin: 2em 0;
 
     h2{
         position: absolute;
-        right: 15%;
-        bottom: -182%;
+        right: 10%;
+        bottom: -190%;
         font-size: 50px;
     }
 }
@@ -73,6 +73,9 @@
  .newArrivalHeading{
      margin: 3em;
      align-items: center;
+     border-bottom: 1px solid lightgrey;
+     padding-bottom: 3em;
+    
      
      h1{
          margin: 1em 0;

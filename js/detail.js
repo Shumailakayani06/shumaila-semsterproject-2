@@ -29,22 +29,24 @@ async function getData(){
         const details = await response.json();
         
         console.log(details.image.url)
-        console.log(details);
+        
 
         allProducts.innerHTML = "";
         allProducts.innerHTML += `
         <div class"cartdiv">
+     
+        <img src='http://localhost:1337${details.image.url}'/> 
         <h2>
         ${details.title}
         </h2>
-        <img src='http://localhost:1337${details.image.url}'/> 
         <p>${details.description}</p>
         <p>${details.price}</p>
-        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image="http://localhost:1337${details.image.url}">add to cart</button>
-        <a href="/edit.html?id=${details.id}">EDIT</a>
+        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="http://localhost:1337${details.image.url}">Add to cart <i class="fas fa-shopping-cart"></i></button>
+        <a href="/edit.html?id=${details.id}">Edit product</a>
+        
         </div>
         `
-
+console.log(details.image.url);
         
     }catch(error){
         console.log("error");
@@ -59,14 +61,14 @@ cartBtn.forEach((button) => {
 }
 
 //handle button function 
- function btnfunction(){
+function btnfunction(){
     
     //event.target.classsList.toggle(".")
 
     const id = this.dataset.id;
     const title = this.dataset.title;
     const price = this.dataset.price;
-    const image = this.dataset.image;
+    const image = this.dataset.image_url;
   
 
     console.log("image", image);

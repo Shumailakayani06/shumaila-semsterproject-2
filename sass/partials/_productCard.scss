@@ -50,12 +50,15 @@
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+   
 }
 
 
 /*product page card*/
 
 .productspage{
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
 
     img{
         width: 200px;
@@ -81,6 +84,8 @@
     margin-left: 1.5em;
     font-family: "Mohave", sans-serif;
     letter-spacing: 3px;
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
   }
   
   .categoryDiv {

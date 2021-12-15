@@ -1,0 +1,46 @@
+.login-heading{
+    align-items: center;
+    text-align: center;
+    padding: 2em 0em;
+
+    h1{
+        font-family: 'Mohave', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 400;
+        
+    }
+    
+}
+
+.container{
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    background-color: #ffc2d1;
+
+    input{
+        margin: 1em;
+        padding: 0.3em;
+            }
+
+            input::placeholder{
+                 padding: 1em;
+            }
+
+     button{
+         background-color: black;
+         color: white;
+         padding: 0.8em 2em;
+         margin-top: 2em;
+     }       
+
+            
+}
+
+.message-c{
+    color: red;
+    
+}

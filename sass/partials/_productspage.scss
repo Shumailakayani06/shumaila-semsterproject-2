@@ -1,6 +1,8 @@
 .productHeading{
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 2em 0em;
 
     h1{
         font-family: 'Mohave', sans-serif;
@@ -19,14 +21,14 @@
 
 .lookheadingproductspage{
     position: absolute;
-    bottom: -90%;
+    bottom: -110%;
     right: 10%;
  
 }
 
 .lookpproductspage{
     position: absolute;
-    bottom: -100%;
+    bottom: -120%;
     right: 10%;
 }
 
@@ -41,6 +43,6 @@
     cursor: pointer;
     text-decoration: none;
     position: absolute;
-    bottom: -110%;
+    bottom: -130%;
     right: 10%;
   }

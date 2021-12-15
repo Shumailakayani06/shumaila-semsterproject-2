@@ -14,32 +14,62 @@
 <body>
     <div>
         <div class="menu-c"></div>
+
+        <div>
+            <img src="/images/logofooter.png" class="logo">
+        </div>
+
+        <div class="addProductHeading">
+            <h1>Add Product</h1>
+           </div> 
+
         <div class="created-product"></div>
-        <h1>Add Products</h1>
+       
         
-        <form>
+        <form class="addProductForm">
             <div class="form-message"></div>
 
             <div>
-                <label for="title">Title</label>
+                <label for="title">Title:</label>
                 <input id="title">
             </div>
             <div>
-                <label for="price">Price</label>
+                <label for="price">Price:</label>
                 <input id="price">
             </div>
             <div>
-                <label for="description">Description</label>
+                <label for="description">Description:</label>
                 <textarea id="description"></textarea>
             </div>
             <div>
+                <label for="img">Image:</label>
                 <input type="file" id="img" name="img" accept="image/*">
                 
             </div>
-            <button>Add</button>
+            <button>Add product</button>
           
         </form>
     </div>
+
+
+      <!-- FOOTER SECTION-->
+      <footer>
+        <div>
+            <div>
+                <h3>Defining beauty since forever</h3>
+            </div>
+            <div>
+                <img src="/images/logofooter.png" alt="#">
+            </div>
+            <div class="footerDiv">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     
     <script src="/js/addproduct.js" type="module"></script>
 </body>

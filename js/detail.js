@@ -2,6 +2,7 @@ import { url } from "../components.js";
 import { getProducts } from "../cartFunction.js";
 import menu from "./menu.js";
 const allProducts = document.querySelector(".all-products");
+let breadbrumbsLink = document.querySelector(".breadcrumbs__link--active");
 const urlPro = url + "products";
 
 
@@ -22,6 +23,8 @@ if(getId != null){
 
 menu();
 
+let crumbs = "";
+
 async function getData(){
 
     try{
@@ -40,12 +43,15 @@ async function getData(){
         ${details.title}
         </h2>
         <p>${details.description}</p>
-        <p>${details.price}</p>
+        <p>${details.price} Nok</p>
         <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="http://localhost:1337${details.image.url}">Add to cart <i class="fas fa-shopping-cart"></i></button>
         <a href="/edit.html?id=${details.id}">Edit product</a>
         
         </div>
         `
+
+        crumbs += `${details.title}`;
+        breadbrumbsLink.innerHTML = crumbs;
 console.log(details.image.url);
         
     }catch(error){

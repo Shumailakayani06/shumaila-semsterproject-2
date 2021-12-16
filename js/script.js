@@ -11,6 +11,18 @@ let data=[];
 // display featured products
 menu();
 
+
+/* loader */
+
+
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
+
 async function getProducts(){
     try{
         const response = await fetch(urlPro);

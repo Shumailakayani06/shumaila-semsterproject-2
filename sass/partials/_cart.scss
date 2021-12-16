@@ -1,8 +1,22 @@
 .cart-div{
-    background-color: darkgray;
-    display: block;
+  
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 1em;
     padding: 1em;
+img{
+   
+    width: 200px;
+    box-shadow: 4px 4px 3px darkgray;
+}
+  
+}
+
+.cart-div img{
+    width: 800px;
 }
 
 
@@ -10,12 +24,16 @@
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     padding: 3em;
+    text-align: right;
+    margin-bottom: 1em;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .cartHeading{
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid lightgrey;
+   
     padding: 2em 0em;
 
     h1{
@@ -26,3 +44,4 @@
     }
     
 }
+

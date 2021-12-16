@@ -47,6 +47,86 @@
   flex-wrap: wrap;
   justify-content: space-between; }
 
+/* breadcrumbs */
+.breadcrumbs {
+  padding: 10px; }
+
+.breadcrumbs__item {
+  display: inline-block; }
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: "/";
+  margin: 0 5px;
+  color: lightgray; }
+
+.breadbrumbs__link {
+  color: darkgrey;
+  letter-spacing: 1.5px; }
+
+.breadbrumbs__link:hover {
+  text-decoration: underline; }
+
+.breadcrumbs__link--active {
+  color: #FFA9BF;
+  font-weight: 500; }
+
+.breadcrumbs__link--active:hover {
+  text-decoration: none; }
+
+/* spinner */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99; }
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 1s linear infinite; }
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #18b201; }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #0456c8; }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #8004c8; } }
+.ring:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(14, 12, 12, 0.3); }
+
+.loadingS {
+  color: darkslategrey;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
 .herobanner {
   background-image: url(/images/HeroBannerr.jpg);
   height: 90vh;
@@ -132,7 +212,7 @@
   .pDiv img {
     width: 300px;
     height: 300px;
-    box-shadow: 3px 2px 2px darkgray; }
+    box-shadow: 4px 4px 3px darkgray; }
   .pDiv h3 {
     margin: 2em 1em;
     color: grey; }
@@ -253,20 +333,32 @@
   margin-left: 1em; }
 
 .cart-div {
-  background-color: darkgray;
-  display: block;
+  border-top: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 1em;
   padding: 1em; }
+  .cart-div img {
+    width: 200px;
+    box-shadow: 4px 4px 3px darkgray; }
+
+.cart-div img {
+  width: 800px; }
 
 .cart-total {
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-  padding: 3em; }
+  padding: 3em;
+  text-align: right;
+  margin-bottom: 1em;
+  font-size: 25px;
+  font-weight: bold; }
 
 .cartHeading {
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid lightgrey;
   padding: 2em 0em; }
   .cartHeading h1 {
     font-family: 'Mohave', sans-serif;
@@ -276,7 +368,7 @@
 /* FOOTER SECTION */
 footer {
   text-align: center;
-  background-color: #A2A2A2;
+  background-color: #cac9c9;
   height: 75vh;
   margin: 0; }
   footer a {
@@ -397,12 +489,12 @@ footer img {
 
 .lookheadingproductspage {
   position: absolute;
-  bottom: -110%;
+  bottom: 40%;
   right: 10%; }
 
 .lookpproductspage {
   position: absolute;
-  bottom: -120%;
+  bottom: 30%;
   right: 10%; }
 
 .lookshopNowBtnproduct {
@@ -413,7 +505,7 @@ footer img {
   cursor: pointer;
   text-decoration: none;
   position: absolute;
-  bottom: -130%;
+  bottom: 15%;
   right: 10%; }
 
 .productdetailHeading {
@@ -484,7 +576,9 @@ footer img {
   margin-left: auto;
   margin-right: auto;
   padding: 3em;
-  background-color: #ffc2d1; }
+  background-color: #ffc2d1;
+  margin-bottom: 10em;
+  box-shadow: 4px 4px 3px darkgray; }
   .container input {
     margin: 1em;
     padding: 0.3em; }
@@ -510,7 +604,15 @@ footer img {
     font-weight: 400; }
 
 .addProductForm {
-  margin: 3em 2em; }
+  text-align: center;
+  border: 1px solid lightgray;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em;
+  background-color: #ffc2d1;
+  margin-bottom: 3em;
+  box-shadow: 4px 4px 3px darkgray; }
   .addProductForm input {
     margin: 1em; }
   .addProductForm button {
@@ -519,7 +621,8 @@ footer img {
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-top: 3em; }
 
 .form-message {
   color: #a77143;

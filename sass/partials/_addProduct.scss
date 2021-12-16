@@ -15,7 +15,15 @@
 
 .addProductForm{
   
-    margin: 3em 2em;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    background-color: #ffc2d1;
+    margin-bottom: 3em;
+    box-shadow: 4px 4px 3px darkgray;
 
     input{
         margin: 1em;
@@ -28,6 +36,7 @@
         letter-spacing: 1px;
         cursor: pointer;
         text-decoration: none;
+        margin-top: 3em;
     }
 }
 

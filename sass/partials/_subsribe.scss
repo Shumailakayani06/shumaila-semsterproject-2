@@ -5,13 +5,14 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url(/images/subscribe.png);
+    //background-image: url(/images/subscribe.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 3em;
     border-bottom: 2px solid white;
     height: 70vh;
     margin: 0;
+    background-color: black;
     
   
 
@@ -23,7 +24,6 @@
     max-width: 500px;
     letter-spacing: 1px;
     
-    
   }
   
   .emailSect {
@@ -34,21 +34,44 @@
   .emailSect input {
     padding: 1em 3em;
     border: none;
-    
     margin-top: 2em;
 
   }
   .emailSect a {
     padding: 0.8em 2em;
-    background-color: black;
+    background-color:#FFA9BF;
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
-    
     margin-top: 2em;
-
   }
   .emailSect a i {
     margin-left: 8px;
     font-size: 20px;
+  }
+
+
+  @media screen and (min-width: 374px) and (max-width: 767px){
+  .subDiv{
+    height: 50vh;
+  }
+    .subDiv h3 {
+      
+      font-size: 20px;
+      max-width: 300px;
+      letter-spacing: 1px;
+      
+    }
+
+    .emailSect a {
+      padding: 0.5em 2em;
+      
+    }
+
+    .emailSect input {
+      padding: 1em 3em;
+      margin-bottom: 1em;
+
+  
+    }
   }

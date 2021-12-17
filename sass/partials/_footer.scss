@@ -3,12 +3,12 @@
 
 footer {
        text-align: center;
-        background-color: #cac9c9;
+        background-color: #000000;
         height: 75vh;
         margin: 0;
 
         a{
-            color: black;
+            color:white;
             text-decoration: none;
         }
         
@@ -21,6 +21,7 @@ footer {
     padding: 2em 0;
     font-weight: 400;
     font-family: 'Comfortaa', cursive;
+    color: white;
   }
   
   .footerDiv {
@@ -50,4 +51,27 @@ footer {
   
   footer img {
     margin-bottom: 2em;
+  }
+
+  @media screen and (max-width:768px){
+    
+    footer {
+      height: 55vh;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 767px){
+    footer {
+      height: 55vh;
+    }
+
+    footer h3 {
+      font-size: 1em;
+      
+
+    }
+
+    footer img{
+      width: 300px;
+    }
   }

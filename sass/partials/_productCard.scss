@@ -97,7 +97,9 @@
         text-decoration: none;
     }
   }
-  
+
+ 
+    
   .categoryDiv img {
     width: 200px;
     height: 200px;
@@ -121,6 +123,56 @@
   
   .imgText {
     text-align: center;
+  }
+
+ 
+
+
+  @media screen and (max-width:768px){
+
+    .pDiv{
+        margin: 5em 2em;
+        margin-bottom: 10em;
+        padding: 1em;
+        width: 400px;
+        height: 300px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+     
+       
+    
+        img{
+            width: 400px;
+            height: 300px;
+            box-shadow: 4px 4px 3px darkgray;
+        
+        }
+    }    
+
+  }
+
+
+  @media screen and (min-width: 374px) and (max-width: 767px){
+    .pDiv{
+        margin: 5em 2em;
+        margin-bottom: 10em;
+        padding: 1em;
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+     
+       
+    
+        img{
+            width: 300px;
+            height: 300px;
+            box-shadow: 4px 4px 3px darkgray;
+        
+        }
+    }   
   }
 
 

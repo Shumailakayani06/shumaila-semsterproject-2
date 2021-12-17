@@ -18,21 +18,35 @@ export default function menu(){
 
     if(userName){
         aLink = `
-        <a href="/addproduct.html" class="${pathname === "/addproduct.html" ? "active" : ""}">Add product</a>
-        <a>Hello ${userName}</a>
-        <button id="logout" class="logoutBtn">Logout</button>
+        <li><a href="/addproduct.html" class="${pathname === "/addproduct.html" ? "active" : ""}">Add product</a></li>
+        <li><a>Hello ${userName}</a></li>
+        <li><button id="logout" class="logoutBtn">Logout</button></li>
         `
     }
 
    menuSection.innerHTML = `
-   <div class="menu">
+   <nav class="menu">
+   <div class="bslogo">Beauty Store</div>
+   <ul class="nav-links">
+   <li>
    <a href="/index.html" class="${pathname === "/" || pathname ==="/index.html" ? "active" : ""}">Home</a>
+   </li>
+   <li>
    <a href="/products.html" class="${pathname === "/products.html" ? "active" : ""}">Products</a>
+   </li>
+   <li>
    <a href="/cart.html" class="${pathname === "/cart.html" ? "active" : ""}"><i class="fas fa-shopping-cart"></i></a>
-   
+   </li>
    ${aLink}
+   </ul>
 
-   </div>`
+   <div class="burger">
+   <div class="line1"></div>
+   <div class="line2"></div>
+   <div class="line3"></div>
+   </div>
+
+   </nav>`
 
   
 
@@ -61,5 +75,7 @@ export default function menu(){
         }
      }
      
+
+ 
 
 

@@ -37,7 +37,6 @@
     bottom: 29%;
     width: 200px;
     text-align: center;
-   
   }
   .herobanner a:hover {
     background-color: #FFA9BF;
@@ -89,6 +88,101 @@
          font-size: 20px;
      }
  }
+
+
+ @media screen and (max-width:768px){
+    .herobanner{
+        width: 767px;
+        background-size:auto;
+        height: 53vh;
+    }
+
+    .slogan {
+        bottom: 65%;
+        margin-left: 1em;
+        font-size: 25px;
+    }
+
+
+  .sloganp {
+   
+    bottom: 60%;
+    width: 300px;
+    margin-left: 1.5em;
+  }
+
+  .herobanner a {
+    
+    padding: 1em 2em;
+    font-weight: 400;
+    left: 5%;
+    bottom: 50%;
+  }
+
+
+  .banner1{
+    
+    height: 38vh;
+    background-size: auto;
+ 
+
+    h2{
+        position: absolute;
+        right: 10%;
+        bottom: -205%;
+        font-size: 25px;
+    }
+}
+}
+
+@media screen and (min-width: 374px) and (max-width: 767px){
+    .herobanner{
+     
+        height: 50vh;
+        background-size: cover;
+         width: 100%;
+    }
+
+
+    .slogan {
+        bottom: 75%;
+        margin-left: 1em;
+        font-size: 20px;
+    }
+
+
+  .sloganp {
+   
+    bottom: 70%;
+    width: 220px;
+    margin-left: 1.5em;
+    font-size: 12px;
+  }
+
+  .herobanner a {
+    
+    padding: 0.5em 0.5em;
+    font-weight: 400;
+    left: 5%;
+    bottom: 50%;
+    width: 130px;
+  }
+
+
+  .banner1{
+
+
+    h2{
+       
+       left: 10%;
+        bottom: -320%;
+        font-size: 20px;
+        color: white;
+    }
+}
+}
+
+
 
 
  

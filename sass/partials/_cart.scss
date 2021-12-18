@@ -1,4 +1,4 @@
-.cart-div{
+.cart-products .cart-div{
   
     border-top: 1px solid lightgray;
     display: flex;
@@ -7,6 +7,20 @@
     flex-wrap: wrap;
     margin: 1em;
     padding: 1em;
+
+    a{
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        
+        
+    }
+
+    
 img{
    
     width: 200px;
@@ -43,5 +57,13 @@ img{
         
     }
     
+}
+
+@media screen and (min-width: 374px) and (max-width: 767px){
+    .cart-div{
+        img{
+            height: 200px;
+        }
+    }   
 }
 

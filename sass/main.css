@@ -98,7 +98,7 @@
 
 .active {
   text-decoration: underline;
-  color: red; }
+  color: #FFA9BF; }
 
 .searchbarAndLogo {
   display: flex;
@@ -491,7 +491,7 @@
 .searchWrapper {
   margin-left: 1em; }
 
-.cart-div {
+.cart-products .cart-div {
   border-top: 1px solid lightgray;
   display: flex;
   flex-direction: row;
@@ -499,7 +499,15 @@
   flex-wrap: wrap;
   margin: 1em;
   padding: 1em; }
-  .cart-div img {
+  .cart-products .cart-div a {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; }
+  .cart-products .cart-div img {
     width: 200px;
     box-shadow: 4px 4px 3px darkgray; }
 
@@ -524,6 +532,9 @@
     letter-spacing: 3px;
     font-weight: 400; }
 
+@media screen and (min-width: 374px) and (max-width: 767px) {
+  .cart-div img {
+    height: 200px; } }
 /* FOOTER SECTION */
 footer {
   text-align: center;
@@ -575,10 +586,13 @@ footer img {
     height: 55vh; }
 
   footer h3 {
-    font-size: 1em; }
+    font-size: 0.8em; }
 
   footer img {
     width: 300px; } }
+@media screen and (min-width: 768px) {
+  footer h3 {
+    font-size: 1.5em; } }
 /* SUBSCRIBE SECTION */
 .subDiv {
   display: flex;
@@ -629,10 +643,11 @@ footer img {
     letter-spacing: 1px; }
 
   .emailSect a {
-    padding: 0.5em 2em; }
+    padding: 0.5em 1em;
+    width: 150px; }
 
   .emailSect input {
-    padding: 1em 3em;
+    padding: 1em 2em;
     margin-bottom: 1em; } }
 .shopbyLook {
   background-image: url(/images/look.jpg);
@@ -642,13 +657,15 @@ footer img {
 
 .lookheading {
   position: absolute;
-  bottom: -390%;
-  right: 10%; }
+  bottom: -385%;
+  right: 10%;
+  color: white; }
 
 .lookp {
   position: absolute;
-  bottom: -400%;
-  right: 10%; }
+  bottom: -390%;
+  right: 10%;
+  color: white; }
 
 .lookshopNowBtn {
   padding: 0.7em 2em;
@@ -658,7 +675,7 @@ footer img {
   cursor: pointer;
   text-decoration: none;
   position: absolute;
-  bottom: -410%;
+  bottom: -400%;
   right: 10%; }
 
 @media screen and (max-width: 768px) {
@@ -693,7 +710,7 @@ footer img {
     display: none; }
 
   .lookshopNowBtn {
-    bottom: -445%;
+    bottom: -455%;
     right: 3%; } }
 .productHeading {
   align-items: center;
@@ -711,12 +728,14 @@ footer img {
 .lookheadingproductspage {
   position: absolute;
   bottom: 40%;
-  right: 10%; }
+  right: 10%;
+  color: white; }
 
 .lookpproductspage {
   position: absolute;
   bottom: 30%;
-  right: 10%; }
+  right: 10%;
+  color: white; }
 
 .lookshopNowBtnproduct {
   padding: 0.7em 2em;
@@ -729,6 +748,57 @@ footer img {
   bottom: 15%;
   right: 10%; }
 
+@media screen and (min-width: 374px) and (max-width: 767px) {
+  .lookheadingproductspage {
+    display: none; }
+
+  .lookpproductspage {
+    display: none; }
+
+  .lookshopNowBtnproduct {
+    font-size: 12px;
+    bottom: 5%;
+    right: 25%; }
+
+  .productspage img {
+    width: 250px;
+    height: 250px; }
+
+  .productspage .pDiv {
+    margin: 6em 0; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lookheadingproductspage {
+    bottom: 70%;
+    left: 5%;
+    font-size: 20px;
+    color: white; }
+
+  .lookpproductspage {
+    bottom: 65%;
+    left: 5%;
+    max-width: 200px;
+    color: white; }
+
+  .lookshopNowBtnproduct {
+    font-size: 12px;
+    bottom: 20%;
+    right: 70%; } }
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .lookheadingproductspage {
+    bottom: 65%;
+    font-size: 20px;
+    right: 5%;
+    color: white; }
+
+  .lookpproductspage {
+    bottom: 60%;
+    right: 5%;
+    color: white; }
+
+  .lookshopNowBtnproduct {
+    font-size: 12px;
+    bottom: 50%;
+    right: 10%; } }
 .productdetailHeading {
   align-items: center;
   text-align: center;
@@ -757,7 +827,8 @@ footer img {
     max-width: 450px;
     text-align: center;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 1em; }
   .all-products button {
     padding: 0.7em 2em;
     background-color: black;
@@ -814,6 +885,9 @@ footer img {
 .message-c {
   color: red; }
 
+@media screen and (min-width: 374px) and (max-width: 767px) {
+  .container {
+    width: 300px; } }
 .addProductHeading {
   align-items: center;
   text-align: center;
@@ -867,6 +941,12 @@ footer img {
   margin-top: 3em;
   margin-bottom: 3em; }
 
+@media screen and (min-width: 374px) and (max-width: 767px) {
+  .addProductForm {
+    width: 350px; }
+
+  .editContainer {
+    width: 300px; } }
 * {
   margin: 0;
   padding: 0;

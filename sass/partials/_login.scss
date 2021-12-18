@@ -46,3 +46,9 @@
     color: red;
     
 }
+
+@media screen and (min-width: 374px) and (max-width: 767px){
+    .container{
+        width: 300px;
+    }
+}

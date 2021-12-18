@@ -55,12 +55,16 @@ productCart.forEach(product => {
     console.log(product.image)
     
     allProducts.innerHTML += `
+    
     <div class="cart-div">
+    <a href="/detail.html?id=${product.id}">
     <img src="${product.image}"/> 
     <h2>${product.title}</h2>
     <h2>${product.price} Nok</h2>
-    
+    </a>
     </div>
+   
+
     `
     console.log(productCart);
 

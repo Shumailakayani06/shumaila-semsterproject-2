@@ -66,12 +66,20 @@ footer {
     }
 
     footer h3 {
-      font-size: 1em;
+      font-size: 0.8em;
       
 
     }
 
     footer img{
       width: 300px;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    footer h3 {
+      font-size: 1.5em;
+      
+
     }
   }

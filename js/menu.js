@@ -26,7 +26,7 @@ export default function menu(){
 
    menuSection.innerHTML = `
    <nav class="menu">
-   <div class="bslogo">Beauty Store</div>
+   <div class="bslogo"><a href="/index.html">Beauty Store</a></div>
    <ul class="nav-links">
    <li>
    <a href="/index.html" class="${pathname === "/" || pathname ==="/index.html" ? "active" : ""}">Home</a>

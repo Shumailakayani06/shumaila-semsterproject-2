@@ -83,8 +83,8 @@ async function getData(){
         </div>
         `
 
-        crumbs += `${details.title}`;
-        breadbrumbsLink.innerHTML = crumbs;
+        // crumbs += `${details.title}`;
+        // breadbrumbsLink.innerHTML = crumbs;
 console.log(details.image.url);
         
     }catch(error){

@@ -9,6 +9,10 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px; }
+    .menu .bslogo a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px; }
   .menu .nav-links {
     display: flex;
     width: 60%;
@@ -457,7 +461,8 @@
   color: white;
   letter-spacing: 1px;
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  box-shadow: 4px 4px 3px darkgray; }
 
 .ViewAllP {
   padding: 0.7em 2em;
@@ -465,13 +470,15 @@
   color: white;
   letter-spacing: 1px;
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  box-shadow: 4px 4px 3px darkgray; }
 
 .veiwAllProducts {
   margin: 10em 4em;
   text-align: center;
   border-bottom: 1px solid grey;
-  padding-bottom: 4em; }
+  padding-bottom: 4em;
+  box-shadow: 4px 4px 3px darkgray; }
 
 .pDiv button {
   background-color: #ffbdcd;
@@ -479,7 +486,8 @@
   height: 40px;
   border: none;
   color: black;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 4px 4px 3px darkgray; }
 
 .searchWrapper input {
   width: 250px;
@@ -814,7 +822,8 @@ footer img {
   text-align: center;
   align-items: center; }
   .all-products img {
-    width: 400px; }
+    width: 400px;
+    box-shadow: 4px 4px 3px darkgray; }
   .all-products h2 {
     font-family: 'Mohave', sans-serif;
     letter-spacing: 3px;
@@ -836,7 +845,8 @@ footer img {
     letter-spacing: 1px;
     cursor: pointer;
     text-decoration: none;
-    margin: 2em 2em; }
+    margin: 2em 2em;
+    box-shadow: 4px 4px 3px darkgray; }
   .all-products a {
     background-color: #ffbdcd;
     color: white;

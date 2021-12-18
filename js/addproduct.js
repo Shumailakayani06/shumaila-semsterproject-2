@@ -45,7 +45,8 @@ const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
-const image = document.querySelector("#img");
+const image = document.getElementById("img1");
+
 const message = document.querySelector(".form-message");
 const createdProduct = document.querySelector(".created-product");
 
@@ -67,6 +68,7 @@ function formSubmit(event){
     }
 
     addProduct(titleV, priceV, descriptionV, imageV);
+    console.log(imageV);
 
 }
 // const token = await gToken();
@@ -80,42 +82,49 @@ export function getToken(){
     
 }
 const token = getToken();
-console.log(token);
+
 
 
 
 
 async function addProduct(title, price, description, image){
-    // console.log("http://localhost:1337/uploads/" + image);
+    console.log("http://localhost:1337/uploads/" + image);
     // console.log(image.attributes[1].textContent);
     const URL = url + "products";
     
-    // C:\fakepath\haircare.webp
+  
      
      const imageSplit = image.split("\\");
-     let newimage ="http://localhost:1337/uploads/" + imageSplit[2];
+    //  let newimage =imageSplit[2];
+     let newimage =  "http://localhost:1337/uploads/" + imageSplit[2];
 
-     console.log(newimage); 
+     console.log(image); 
 
     const data = JSON.stringify(
         {title: title,
-             price: price,
-              description: description, 
-              image: newimage})
+        price: price,
+         description: description,
+         image_url: image})
 
-    
+         console.log(data);
+
+    // let formData = new FormData();
+    // formData.append("img", image);
+   
     const option = {
 
         method: "POST",
-        body: data,
+        body: data, 
         headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer " +`${token}`
         }
     }
 
+    //"Content-Type": "multipart/form-data",
+
     try{
-       const response = await fetch(URL, option);
+       const response = await fetch(URL , option);
        const json = await response.json();
        
 
@@ -123,6 +132,7 @@ async function addProduct(title, price, description, image){
            createdProduct.innerHTML = "New product created successfully";
            form.reset();
        }
+       
     }
     catch(error){
 console.log(error)

@@ -72,7 +72,8 @@ console.log(data);
         
         <div class="pDiv">
         <a href="/detail.html?id=${item.id}">
-        <img src='http://localhost:1337${item.image.url}'/> 
+        
+        <img src='${item.image_url}'/> 
         </a>
         <h3>${item.title}</h3>
         <p> ${item.price} Nok</p>
@@ -89,6 +90,8 @@ console.log(data);
     })
 
 }
+
+{/* <img src='http://localhost:1337${item.image.url}'/>  */}
 
 
 

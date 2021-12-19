@@ -38,7 +38,8 @@ export function guName(){
 }
 
 
-
+//stStorage = save to storage
+//gfStorage = get from storgae
 export function stStorage(key, value){
     localStorage.setItem(key, JSON.stringify(value));
 }

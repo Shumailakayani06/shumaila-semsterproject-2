@@ -16,7 +16,8 @@
   .menu .nav-links {
     display: flex;
     width: 60%;
-    justify-content: space-around; }
+    justify-content: space-around;
+    z-index: 1; }
   .menu .nav-links a {
     color: white;
     text-decoration: none;
@@ -216,13 +217,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 3px 3px 5px gray;
-  color: white;
+  color: black;
   margin: 2em 0; }
-  .banner1 h2 {
-    position: absolute;
-    right: 10%;
-    bottom: -190%;
-    font-size: 50px; }
+
+.giftHeading {
+  padding: 2em;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px; }
 
 .herobanner a {
   background-color: black;
@@ -300,10 +302,7 @@
     height: 38vh;
     background-size: auto; }
     .banner1 h2 {
-      position: absolute;
-      right: 10%;
-      bottom: -205%;
-      font-size: 25px; } }
+      display: none; } }
 @media screen and (min-width: 374px) and (max-width: 767px) {
   .herobanner {
     height: 50vh;
@@ -477,8 +476,7 @@
   margin: 10em 4em;
   text-align: center;
   border-bottom: 1px solid grey;
-  padding-bottom: 4em;
-  box-shadow: 4px 4px 3px darkgray; }
+  padding-bottom: 4em; }
 
 .pDiv button {
   background-color: #ffbdcd;
@@ -547,7 +545,7 @@
 footer {
   text-align: center;
   background-color: #000000;
-  height: 75vh;
+  height: 60vh;
   margin: 0; }
   footer a {
     color: white;
@@ -663,17 +661,18 @@ footer img {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.shop {
+  padding: 2em; }
+
 .lookheading {
-  position: absolute;
-  bottom: -385%;
-  right: 10%;
-  color: white; }
+  font-size: 25px;
+  letter-spacing: 2px; }
 
 .lookp {
-  position: absolute;
-  bottom: -390%;
-  right: 10%;
-  color: white; }
+  font-size: 20px; }
+
+.getThisLookBtn {
+  margin: 2em; }
 
 .lookshopNowBtn {
   padding: 0.7em 2em;
@@ -681,45 +680,17 @@ footer img {
   color: white;
   letter-spacing: 1px;
   cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  bottom: -400%;
-  right: 10%; }
+  text-decoration: none; }
 
 @media screen and (max-width: 768px) {
   .shopbyLook {
     height: 60vh;
-    background-size: auto; }
-
-  .lookheading {
-    display: none; }
-
-  .lookp {
-    display: none; }
-
-  .lookshopNowBtn {
-    display: none; } }
+    background-size: auto; } }
 @media screen and (min-width: 374px) and (max-width: 767px) {
   .shopbyLook {
     width: 100%;
     height: 60vh;
-    background-size: cover; }
-
-  .lookshopNowBtn {
-    bottom: -597%;
-    right: 60%;
-    padding: 0.5em;
-    font-size: 12px; } }
-@media screen and (min-width: 768px) and (max-width: 1125px) {
-  .lookheading {
-    display: none; }
-
-  .lookp {
-    display: none; }
-
-  .lookshopNowBtn {
-    bottom: -455%;
-    right: 3%; } }
+    background-size: cover; } }
 .productHeading {
   align-items: center;
   text-align: center;

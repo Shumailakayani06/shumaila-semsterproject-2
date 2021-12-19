@@ -1,27 +1,24 @@
 import { getProducts } from "../cartFunction.js";
 import menu from "./menu.js";
 
-
+//////////////////////////////////////////////////////////////
 const productCart = getProducts();
-
 const cartProducts = document.querySelector(".cart-products");
 const cartTotal = document.querySelector(".cart-total")
-
 export const emptyCart = document.querySelector(".empty-cart");
-
-
 const allProducts = document.querySelector(".all-products");
 
+//////////////////////////////////////////////////////////////
+
+//calling menu function
 menu();
 
+//////////////////////////////////////////////////////////////
 //Hamburger menu 
-
 const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -47,9 +44,25 @@ navLinks.forEach((link,index) =>{
 
 navSlide();
 
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
+//////////////////////////////////////////////////////////////
+
+// if cart is empty show a msg "Your cart is empty"
+
 if (productCart.length === 0){
-    allProducts.innerHTML = "empty cart";
+    allProducts.innerHTML = "Your cart is empty";
 }
+
+//////////////////////////////////////////////////////////////
+
+//shoow products in cart
 
 productCart.forEach(product => {
     console.log(product.image)
@@ -67,10 +80,11 @@ productCart.forEach(product => {
 
     `
     console.log(productCart);
-
-  
-   
 });
+
+//////////////////////////////////////////////////////////////
+
+// show total amout in cart
 
 let total = 0;
 

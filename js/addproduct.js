@@ -2,20 +2,20 @@ import menu from "./menu.js";
 import { gToken } from "./lsStorage.js";
 import { url } from "../components.js";
 
+//////////////////////////////////////////////////////////////
 
 
-
-
+//calling menu function
 menu();
 
+
+//////////////////////////////////////////////////////////////
 //Hamburger menu 
 
 const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -41,14 +41,17 @@ navLinks.forEach((link,index) =>{
 
 navSlide();
 
+//////////////////////////////////////////////////////////////
+
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.getElementById("img1");
-
 const message = document.querySelector(".form-message");
 const createdProduct = document.querySelector(".created-product");
+
+//////////////////////////////////////////////////////////////
 
 
 form.addEventListener("submit", formSubmit);
@@ -85,7 +88,7 @@ const token = getToken();
 
 
 
-
+//////////////////////////////////////////////////////////////
 
 async function addProduct(title, price, description, image){
     console.log("http://localhost:1337/uploads/" + image);

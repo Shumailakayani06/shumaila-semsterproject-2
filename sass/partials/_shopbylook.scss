@@ -5,20 +5,23 @@
     background-repeat: no-repeat;
 }
 
-.lookheading{
-    position: absolute;
-    bottom: -385%;
-    right: 10%;
-    color: white;
+.shop{
  
+  padding: 2em;
+}
+.lookheading{
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .lookp{
-    position: absolute;
-    bottom: -390%;
-    right: 10%;
-    color: white;
+  font-size: 20px;
 }
+
+.getThisLookBtn{
+  margin: 2em;
+}
+ 
 
 
   //shop by look button
@@ -30,9 +33,7 @@
     letter-spacing: 1px;
     cursor: pointer;
     text-decoration: none;
-    position: absolute;
-    bottom: -400%;
-    right: 10%;
+   
   }
 
 
@@ -44,21 +45,7 @@
       
   }
 
-  .lookheading{
-  
-  display: none;
- 
-}
 
-.lookp{
-  display: none;
-}
-
-
-.lookshopNowBtn{
-display: none;
- 
-}
   }
 
   @media screen and (min-width: 374px) and (max-width: 767px){
@@ -69,29 +56,13 @@ display: none;
       
   }
 
-  .lookshopNowBtn{
-    bottom: -597%;
-    right: 60%;
-    padding: 0.5em;
-    font-size: 12px;
-   
-  }
+
   }
 
 
   @media screen and (min-width:768px) and (max-width:1125px){
   
-.lookheading{
-display: none;
 
-}
-.lookp{
-  display: none;
-}
-.lookshopNowBtn{
-  
-  bottom: -455%;
-  right: 3%;
-}
+
 
   }

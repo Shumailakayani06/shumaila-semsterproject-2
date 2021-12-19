@@ -1,18 +1,17 @@
 import { url } from "../components.js";
 import { getProducts } from "../cartFunction.js";
 import menu from "./menu.js";
+
+//////////////////////////////////////////////////////////////////////
+
 const allProducts = document.querySelector(".all-products");
 let breadbrumbsLink = document.querySelector(".breadcrumbs__link--active");
 const urlPro = url + "products";
-
-
-
 const qString = document.location.search;
 const newParam = new URLSearchParams (qString);
 const getId = newParam.get("id");
-//console.log(getId)
 
-//if(!iD){window.location = "index.html"};
+//////////////////////////////////////////////////////////////////////
 
 
 const allPro = "http://localhost:1337/products/" + getId ;
@@ -20,8 +19,12 @@ if(getId != null){
     getData();
 }
 
+//////////////////////////////////////////////////////////////////////
 
+//calling menu funtion
 menu();
+
+//////////////////////////////////////////////////////////////////////
 
 //Hamburger menu 
 
@@ -29,8 +32,6 @@ const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -56,7 +57,19 @@ navLinks.forEach((link,index) =>{
 
 navSlide();
 
+//////////////////////////////////////////////////////////////////////
+
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
 let crumbs = "";
+
+//get detail on one product
 
 async function getData(){
 
@@ -137,7 +150,7 @@ function btnfunction(){
 
 }
 
-
+//////////////////////////////////////////////////////////////////////
 
 
 //save items in LS

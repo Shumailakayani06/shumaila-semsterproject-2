@@ -2,9 +2,17 @@ import { url } from "../components.js";
 import { getToken } from "./addproduct.js";
 import deleteB from "./delete.js";
 import menu from "./menu.js";
+
+//////////////////////////////////////////////////////////////////////
 const allProducts = document.querySelector(".all-products");
 const urlPro = url + "products";
+
+//////////////////////////////////////////////////////////////////////
+
+//calling menu function
 menu();
+
+//////////////////////////////////////////////////////////////////////
 
 //Hamburger menu 
 
@@ -12,8 +20,6 @@ const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -38,21 +44,30 @@ navLinks.forEach((link,index) =>{
 }
 
 navSlide();
+
+
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+//////////////////////////////////////////////////////////////////////
+
+
 const qString = document.location.search;
 const newParam = new URLSearchParams (qString);
 const getId = newParam.get("id");
-
-
-
-
 const allPro = "http://localhost:1337/products/" + getId ;
-
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const inputId = document.querySelector("#id");
 const message = document.querySelector(".form-message");
+
+//////////////////////////////////////////////////////////////////////
 
 
 
@@ -76,6 +91,8 @@ const message = document.querySelector(".form-message");
 
 form.addEventListener("submit", submitEditForm);
 
+//////////////////////////////////////////////////////////////////////
+
 function submitEditForm(event){
     event.preventDefault();
     message.innerHTML= "";
@@ -92,6 +109,8 @@ function submitEditForm(event){
 
     editProduct(titleV, priceV, descriptionV, idV);
 }
+
+//////////////////////////////////////////////////////////////////////
 
 async function editProduct(title, price, description, id){
     const editUrl = url + "products/" + id;

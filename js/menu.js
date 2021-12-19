@@ -4,7 +4,7 @@ import { clearUser } from "./lsStorage.js";
 
 
 
-
+//menu function
 export default function menu(){
 
     const { pathname } = document.location;

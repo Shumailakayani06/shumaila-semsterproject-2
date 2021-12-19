@@ -4,12 +4,14 @@ import menu from "./menu.js";
 const products = document.querySelector(".featured-products");
 const urlPro = url + "products";
 let data=[];
+////////////////////////////////////////////////////////////////////// 
 
 
 
-
+//calling menu funtion
 
 menu();
+////////////////////////////////////////////////////////////////////// 
 
 //Hamburger menu 
 
@@ -44,16 +46,17 @@ navLinks.forEach((link,index) =>{
 
 navSlide();
 
+////////////////////////////////////////////////////////////////////// 
+
 
 /* loader */
-
-
 window.addEventListener("load", function(){
     const loader = document.querySelector(".loader");
     
     loader.className += " hidden";
     
     })
+  //////////////////////////////////////////////////////////////////////  
 
 // display featured products
 async function getProducts(){
@@ -67,10 +70,7 @@ async function getProducts(){
 
         data.forEach((item) =>{
             if(item.featured === true){
-
-                console.log(data[5].image.url);
-                
-            
+  
             products.innerHTML += `
             
             <div class="pDiv">
@@ -84,10 +84,6 @@ async function getProducts(){
             `
             }
         })
-
-        // <img src="${item.image}" alt="${item.title}"/>
-            
-       
 
     }catch(error){
         console.log(error);

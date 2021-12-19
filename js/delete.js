@@ -1,9 +1,10 @@
      import { url } from "../components.js";
      import { clearUser } from "./lsStorage.js";
-     
-     //Delete button for edit products
-
      import { getToken } from "./addproduct.js";
+
+       //Delete button for edit products
+
+       //Delete button for edit products
 
      export default function deleteB(id){
          const deleteSection = document.querySelector(".deleteproductButton");
@@ -46,9 +47,6 @@
                  location.href = "/index.html";
              }
              }
-
-
-
          }
      }
 

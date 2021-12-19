@@ -5,13 +5,20 @@ import { url } from "../components.js";
 import { sToken, sUser } from "./lsStorage.js";
 import menu from "./menu.js";
 
+//////////////////////////////////////////////////////////////////////
+
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-c");
 
+//////////////////////////////////////////////////////////////////////
+
+//calling menu funtion
 menu();
+
+//////////////////////////////////////////////////////////////////////
 
 //Hamburger menu 
 
@@ -19,8 +26,6 @@ const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -45,6 +50,16 @@ navLinks.forEach((link,index) =>{
 }
 
 navSlide();
+
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
+//////////////////////////////////////////////////////////////////////
 
 form.addEventListener("submit" , submitForm);
 

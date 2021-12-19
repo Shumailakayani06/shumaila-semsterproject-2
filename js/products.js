@@ -1,12 +1,13 @@
 import { url } from "../components.js";
-
 import menu from "./menu.js";
 
 const products = document.querySelector(".featured-products");
 const searchBar = document.getElementById('searchBar');
 const urlPro = url + "products";
 let data=[];
+//////////////////////////////////////////////////////////////////////
 
+//calling menu function
 menu();
 
 //Hamburger menu 
@@ -15,8 +16,6 @@ const navSlide = () =>{
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
-
 
     burger.addEventListener('click', ()=>{
 
@@ -41,10 +40,19 @@ navLinks.forEach((link,index) =>{
 }
 
 navSlide();
+
+//////////////////////////////////////////////////////////////////////
+
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
+
 // fetch featured products
-
-
-
 async function getProducts(){
     try{
         const response = await fetch(urlPro);
@@ -58,7 +66,7 @@ async function getProducts(){
     }
 }
 
-// http://localhost:1337/uploads/haircare_b1a023a6cf.webp
+//////////////////////////////////////////////////////////////////////
 
 // display featured products
  function displayProducts() {
@@ -82,19 +90,16 @@ console.log(data);
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i> 
-    </p>
-        
-        </div>
-        
+        </p>
+        </div> 
         `
     })
-
 }
 
-{/* <img src='http://localhost:1337${item.image.url}'/>  */}
 
+//////////////////////////////////////////////////////////////////////
 
-
+//Search bar filter
 searchBar.onkeyup = function (){
     //console.log(event);
     

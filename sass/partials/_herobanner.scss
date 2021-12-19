@@ -12,15 +12,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 3px 3px 5px gray;
-    color: white;
+    color: black;
     margin: 2em 0;
 
-    h2{
-        position: absolute;
-        right: 10%;
-        bottom: -190%;
-        font-size: 50px;
-    }
+}
+
+.giftHeading{
+    padding: 2em;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 
@@ -127,10 +128,7 @@
  
 
     h2{
-        position: absolute;
-        right: 10%;
-        bottom: -205%;
-        font-size: 25px;
+       display: none;
     }
 }
 }

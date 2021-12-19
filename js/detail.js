@@ -5,8 +5,7 @@ import menu from "./menu.js";
 //////////////////////////////////////////////////////////////////////
 
 const allProducts = document.querySelector(".all-products");
-let breadbrumbsLink = document.querySelector(".breadcrumbs__link--active");
-const urlPro = url + "products";
+ 
 const qString = document.location.search;
 const newParam = new URLSearchParams (qString);
 const getId = newParam.get("id");
@@ -15,9 +14,12 @@ const getId = newParam.get("id");
 
 
 const allPro = "http://localhost:1337/products/" + getId ;
+
 if(getId != null){
+    console.log("not null")
     getData();
 }
+
 
 //////////////////////////////////////////////////////////////////////
 
@@ -59,16 +61,6 @@ navSlide();
 
 //////////////////////////////////////////////////////////////////////
 
-/* loader */
-window.addEventListener("load", function(){
-    const loader = document.querySelector(".loader");
-    
-    loader.className += " hidden";
-    
-    })
-
-let crumbs = "";
-
 //get detail on one product
 
 async function getData(){
@@ -76,29 +68,41 @@ async function getData(){
     try{
         const response = await fetch(allPro);
         const details = await response.json();
+        console.log(details);
         
-        console.log(details.image.url)
-        
+       
+       
 
         allProducts.innerHTML = "";
-        allProducts.innerHTML += `
+               allProducts.innerHTML += `
         <div class"cartdiv">
-     
-        <img src='http://localhost:1337${details.image.url}'/> 
+    
+        <img src='${details.image_url}'/>  
         <h2>
         ${details.title}
         </h2>
         <p>${details.description}</p>
         <p>${details.price} Nok</p>
-        <button class="cartbtn" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="http://localhost:1337${details.image.url}">Add to cart <i class="fas fa-shopping-cart"></i></button>
         <a href="/edit.html?id=${details.id}">Edit product</a>
-        
+
+
+        <button class="cartbtn" 
+        data-id="${details.id}"
+         data-title="${details.title}"
+          data-price="${details.price}" 
+          data-image_url="http://localhost:1337${details.image_url}">
+          Add to cart 
+          <i class="fas fa-shopping-cart"></i>
+          
+        </button>
+
+
         </div>
         `
+   
 
-        // crumbs += `${details.title}`;
-        // breadbrumbsLink.innerHTML = crumbs;
-console.log(details.image.url);
+       
+console.log(details.image_url);
         
     }catch(error){
         console.log("error");

@@ -43,6 +43,15 @@ navSlide();
 
 //////////////////////////////////////////////////////////////
 
+
+/* loader */
+window.addEventListener("load", function(){
+    const loader = document.querySelector(".loader");
+    
+    loader.className += " hidden";
+    
+    })
+
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");

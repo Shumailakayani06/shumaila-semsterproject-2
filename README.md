@@ -1,8 +1,8 @@
-# Your project title
+# Beauty Store
 
 ![image](https://github.com/Shumailakayani06/shumaila-semsterproject-2/blob/main/Screenshot%202022-06-14%20at%2012.22.57.png)
 
-A simple overview of the use/purpose of the project.
+
 
 ## Description
 

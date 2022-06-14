@@ -6,7 +6,7 @@
 
 ## Description
 
-I created an e-commerce website that has both ustomer-facing and admin section.
+I created an e-commerce website that has both customer-facing and admin section.
 
 ## Functionalities
 
